@@ -1,5 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+
+    <!-- Colores principales - Modo Claro -->
+    <color name="dorado_principal">#C8A24A</color>
+    <color name="dorado_oscuro">#A8842F</color>
+    <color name="crema_suave">#F5F1E8</color>
+    <color name="azul_profundo">#1E2A3A</color>
+    <color name="negro_suave">#1E1E1E</color>
+
+    <!-- Colores secundarios - Modo Claro -->
+    <color name="gris_claro">#E5E7EB</color>
+    <color name="gris_medio">#9CA3AF</color>
+    <color name="gris_suave">#D1D5DB</color>
+    <color name="gris_muy_claro">#F1F3F5</color>
+    <color name="azul_claro">#E2E8F0</color>
+    <color name="lavanda_suave">#EDE9FE</color>
+
+    <!-- Estados - Modo Claro -->
+    <color name="exito">#2ECC71</color>
+    <color name="alerta">#F1C40F</color>
+    <color name="error">#E74C3C</color>
+    <color name="informacion">#3498DB</color>
+    <color name="destacado">#9B59B6</color>
+    <color name="neutro">#1ABC9C</color>
+
+    <!-- Opcionales - Modo Claro -->
+    <color name="marfil_suave">#FAF8F3</color>
+    <color name="beige_arena">#F3E9D2</color>
+    <color name="azul_hielo">#F0F4FA</color>
+    <color name="verde_menta_suave">#F0F9F4</color>
+    <color name="durazno_suave">#FFF2E6</color>
+    <color name="rosa_palido">#FDECF1</color>
+    <!-- Colores principales - Modo Oscuro -->
+    <color name="dorado_principal_oscuro">#D4AF37</color>
+    <color name="dorado_oscuro_dark">#B8860B</color>
+    <color name="azul_nocturno">#1A2233</color>
+    <color name="gris_carbon">#2B313C</color>
+    <color name="negro_suave_dark">#0F1115</color>
+
+    <!-- Colores secundarios - Modo Oscuro -->
+    <color name="gris_oscuro">#1E2128</color>
+    <color name="gris_medio_dark">#3A3F47</color>
+    <color name="gris_claro_dark">#6B7280</color>
+    <color name="gris_suave_dark">#9CA34F</color>
+    <color name="azul_profundo_dark">#162033</color>
+    <color name="purpura_suave">#2A2340</color>
+
+    <!-- Estados - Modo Oscuro -->
+    <color name="exito_oscuro">#22C55E</color>
+    <color name="alerta_oscuro">#F59E0B</color>
+    <color name="error_oscuro">#EF4444</color>
+    <color name="informacion_oscuro">#3BB2F6</color>
+    <color name="destacado_oscuro">#8B5CF6</color>
+    <color name="neutro_oscuro">#14B8A6</color>
+
+    <!-- Opcionales - Modo Oscuro -->
+    <color name="verde_azulado">#0D9488</color>
+    <color name="naranja_oscuro">#F97316</color>
+    <color name="rosa_oscuro">#E11D48</color>
+    <color name="cian_suave">#06B6D4</color>
+    <color name="lima_suave">#84CC16</color>
+    <color name="indigo_suave">#6366F1</color>
+
+
+    <!-- General -->
+    <color name="blanco">#FFFFFF</color>
+
 </resources>
