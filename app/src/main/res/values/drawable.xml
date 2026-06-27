@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="fondo_claro">@drawable/fondo_claro</drawable>
+    <drawable name="fondo_oscuro">@drawable/fondo_oscuro</drawable>
+</resources>
