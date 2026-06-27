@@ -18,59 +18,9 @@
         <!-- Logo -->
         <ImageView
             android:layout_width="300dp"
-            android:layout_height="250dp"
+            android:layout_height="300dp"
             android:contentDescription="@string/logo_desc"
             android:src="@drawable/logo_claro" />
-
-        <!-- Línea divisora con punto -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginTop="8dp">
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="1dp"
-                android:layout_weight="1"
-                android:background="@color/dorado_oscuro" />
-
-            <View
-                android:layout_width="6dp"
-                android:layout_height="6dp"
-                android:background="@color/dorado_principal"
-                android:layout_marginHorizontal="6dp" />
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="1dp"
-                android:layout_weight="1"
-                android:background="@color/dorado_oscuro" />
-        </LinearLayout>
-
-        <!-- ALETHEA -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/app_titulo"
-            android:textColor="@color/negro_suave"
-            android:textSize="32sp"
-            android:textStyle="bold"
-            android:letterSpacing="0.2"
-            android:fontFamily="serif"
-            android:layout_marginTop="12dp" />
-
-        <!-- BIBLIOTECA -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/app_subtitulo"
-            android:textColor="@color/dorado_principal"
-            android:textSize="13sp"
-            android:letterSpacing="0.3"
-            android:fontFamily="sans-serif"
-            android:layout_marginTop="2dp" />
 
         <!-- Bienvenido -->
         <TextView
