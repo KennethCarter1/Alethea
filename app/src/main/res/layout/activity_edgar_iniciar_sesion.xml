@@ -1,19 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EdgarRosario.IniciarSesionActivity">
+    android:background="@drawable/bg_claro">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Iniciar Sesion"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="70dp"
+        android:paddingBottom="160dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- Logo -->
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:contentDescription="@string/logo_desc"
+            android:src="@drawable/logo_claro" />
+
+        <!-- Iniciar Sesión titulo -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_titulo"
+            android:textColor="@color/negro_suave"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Campo Usuario -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/campo_borde"
+            android:paddingHorizontal="12dp"
+            android:layout_marginBottom="12dp">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_buscar"
+                android:contentDescription="@string/login_usuario" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/login_usuario"
+                android:textColorHint="@color/gris_medio"
+                android:textColor="@color/negro_suave"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif"
+                android:background="@android:color/transparent"
+                android:paddingStart="10dp"
+                android:inputType="text"
+                android:maxLines="1" />
+        </LinearLayout>
+
+        <!-- Campo Contraseña -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/campo_borde"
+            android:paddingHorizontal="12dp"
+            android:layout_marginBottom="24dp">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_candado"
+                android:contentDescription="@string/login_contrasena" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/login_contrasena"
+                android:textColorHint="@color/gris_medio"
+                android:textColor="@color/negro_suave"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif"
+                android:background="@android:color/transparent"
+                android:paddingStart="10dp"
+                android:inputType="textPassword"
+                android:maxLines="1" />
+        </LinearLayout>
+
+        <!-- Botón Iniciar Sesión -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@drawable/boton_oscuro"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_perfil"
+                android:contentDescription="@string/login_boton" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_boton"
+                android:textColor="@color/crema_suave"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:layout_marginStart="8dp" />
+
+        </LinearLayout>
+
+        <!-- Registrarse -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_registrarse"
+            android:textColor="@color/negro_suave"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif" />
+
+    </LinearLayout>
+</ScrollView>

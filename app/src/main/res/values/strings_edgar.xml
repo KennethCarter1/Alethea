@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- welcome - login - User -->
+    <!-- welcome -  User -->
     <string name="app_titulo">ALETHEA</string>
     <string name="app_subtitulo">BIBLIOTECA</string>
     <string name="bienvenida_titulo">¡Bienvenido/a!</string>
@@ -18,7 +18,7 @@
     <string name="menu_ajustes">Ajustes</string>
     <string name="menu_ajustes_desc">Modo Oscuro/Claro, Cerrar Sesión</string>
 
-    <!-- welcome - login - Admin -->
+    <!-- welcome -  Admin -->
     <string name="admin_gestion_libros">Gestión de Libros</string>
     <string name="admin_gestion_libros_desc">Administra libros de la biblioteca</string>
     <string name="admin_prestamos">Préstamos y devoluciones</string>
@@ -30,6 +30,11 @@
     <string name="admin_gestion_usuarios">Gestión de Usuarios</string>
     <string name="admin_gestion_usuarios_desc">Administra usuarios, roles y permisos</string>
     <string name="admin_ajustes_desc">Modo Oscuro/Claro, Cerrar Sesión</string>
-
+    <!-- Login - first time -->
+    <string name="login_titulo">Iniciar Sesión</string>
+    <string name="login_usuario">Usuario</string>
+    <string name="login_contrasena">Contraseña</string>
+    <string name="login_boton">Iniciar Sesión</string>
+    <string name="login_registrarse">Registrarse</string>
 
 </resources>
