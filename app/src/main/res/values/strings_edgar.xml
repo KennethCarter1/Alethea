@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_titulo">ALETHEA</string>
+    <string name="app_subtitulo">BIBLIOTECA</string>
+    <string name="bienvenida_titulo">¡Bienvenido/a!</string>
+    <string name="bienvenida_slogan">Explora, descubre y aprende</string>
+    <string name="logo_desc">Logo Alethea</string>
+
+    <string name="menu_catalogo">Catálogo de Libros</string>
+    <string name="menu_catalogo_desc">Explora nuestro catálogo completo</string>
+    <string name="menu_prestamos">Mis Préstamos</string>
+    <string name="menu_prestamos_desc">Consulta tus préstamos activos e historial</string>
+    <string name="menu_perfil">Mi Perfil</string>
+    <string name="menu_perfil_desc">Administra tu información personal</string>
+    <string name="menu_favoritos">Favoritos</string>
+    <string name="menu_favoritos_desc">Tus libros guardados y favoritos</string>
+    <string name="menu_ajustes">Ajustes</string>
+    <string name="menu_ajustes_desc">Modo Oscuro/Claro, Cerrar Sesión</string>
+</resources>
