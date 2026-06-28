@@ -30,11 +30,13 @@
     <string name="admin_gestion_usuarios">Gestión de Usuarios</string>
     <string name="admin_gestion_usuarios_desc">Administra usuarios, roles y permisos</string>
     <string name="admin_ajustes_desc">Modo Oscuro/Claro, Cerrar Sesión</string>
-    <!-- Login - first time -->
+    <!-- Login -->
     <string name="login_titulo">Iniciar Sesión</string>
     <string name="login_usuario">Usuario</string>
     <string name="login_contrasena">Contraseña</string>
     <string name="login_boton">Iniciar Sesión</string>
     <string name="login_registrarse">Registrarse</string>
+    <string name="inicio_buscar">Buscar un libro del catálogo</string>
+    <string name="login_titulo_registrarse">Registrarse</string>"
 
 </resources>

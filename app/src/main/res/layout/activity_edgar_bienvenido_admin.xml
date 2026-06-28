@@ -132,10 +132,10 @@
                         android:padding="10dp">
 
                         <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_width="27dp"
+                            android:layout_height="29dp"
                             android:contentDescription="@string/admin_prestamos"
-                            android:src="@drawable/prestamos" />
+                            android:src="@drawable/ic_devoluciones" />
                     </FrameLayout>
 
                     <LinearLayout
