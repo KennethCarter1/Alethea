@@ -250,7 +250,7 @@
                 android:paddingHorizontal="8dp"
                 android:textColor="#5c3f1c"
                 android:textSize="13sp"
-                android:inputType="email" />
+                android:inputType="textEmailAddress" />
 
             <TextView
                 android:layout_width="wrap_content"

@@ -23,7 +23,7 @@
             android:layout_height="28dp"
             android:layout_marginBottom="8dp"
             android:contentDescription="@string/accion_atras"
-            android:src="@drawable/ic_atras" />
+            android:src="@drawable/ic_flecha_atras" />
 
         <!-- Logo -->
         <ImageView
