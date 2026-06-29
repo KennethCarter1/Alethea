@@ -68,7 +68,19 @@ class AletheaBd(context: Context) : SQLiteOpenHelper(
             """.trimIndent()
         )
 
+        db.execSQL(
+            """
+            INSERT INTO Usuarios(usuario, contrasena, es_admin)
+            VALUES('kenneth10', '10102003', 0)
+            """.trimIndent()
+        )
 
+        db.execSQL(
+            """
+            INSERT INTO Usuarios(usuario, contrasena, es_admin)
+            VALUES('kenneth01', '10102003', 1)
+            """.trimIndent()
+        )
     }
 
     override fun onUpgrade(
