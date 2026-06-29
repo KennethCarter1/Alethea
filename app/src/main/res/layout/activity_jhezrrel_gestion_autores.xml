@@ -15,15 +15,29 @@
         android:paddingTop="34dp"
         android:paddingBottom="36dp">
 
-        <TextView
-            android:id="@+id/btnVolver"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:gravity="center_vertical"
-            android:text="&lt;"
-            android:textColor="#6F471B"
-            android:textSize="38sp"
-            android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/btnVolver"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_flecha_atras"
+                    android:contentDescription="Regresar"
+                    android:tint="#5c3f1c" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Gestion de Autores"
+                    android:textColor="#5c3f1c"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
 
         <ImageView
             android:layout_width="190dp"
@@ -32,14 +46,7 @@
             android:scaleType="fitCenter"
             android:src="@drawable/logo_claro" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Gestion de Autores"
-            android:textColor="#5A4430"
-            android:textSize="23sp"
-            android:textStyle="bold" />
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -53,7 +60,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginEnd="14dp"
                 android:layout_weight="1"
-                android:background="@drawable/panel_blanco"
+                android:background="@drawable/cuadro_borde"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:padding="10dp">
@@ -64,7 +71,7 @@
                     android:background="@drawable/circulo_crema"
                     android:gravity="center"
                     android:text="( )"
-                    android:textColor="#6F471B"
+                    android:textColor="#5c3f1c"
                     android:textSize="16sp" />
 
                 <LinearLayout
@@ -79,7 +86,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="00"
-                        android:textColor="#5A4430"
+                        android:textColor="#5c3f1c"
                         android:textSize="26sp"
                         android:textStyle="bold" />
 
@@ -87,7 +94,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Total de Autores"
-                        android:textColor="#7A6A5A"
+                        android:textColor="#5c3f1c"
                         android:textSize="13sp" />
                 </LinearLayout>
             </LinearLayout>
@@ -97,7 +104,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginStart="14dp"
                 android:layout_weight="1"
-                android:background="@drawable/panel_blanco"
+                android:background="@drawable/cuadro_borde"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:padding="10dp">
@@ -121,7 +128,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="00"
-                        android:textColor="#5A4430"
+                        android:textColor="#5c3f1c"
                         android:textSize="26sp"
                         android:textStyle="bold" />
 
@@ -129,7 +136,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Total de Libros"
-                        android:textColor="#7A6A5A"
+                        android:textColor="#5c3f1c"
                         android:textSize="13sp" />
                 </LinearLayout>
             </LinearLayout>
@@ -139,7 +146,7 @@
             android:layout_width="match_parent"
             android:layout_height="58dp"
             android:layout_marginTop="24dp"
-            android:background="@drawable/campo_borde_redondo"
+            android:background="@drawable/campo_borde"
             android:gravity="center_vertical"
             android:orientation="horizontal"
             android:paddingHorizontal="14dp">
@@ -157,8 +164,8 @@
                 android:hint="Buscar un libro del catalogo"
                 android:inputType="text"
                 android:paddingStart="12dp"
-                android:textColor="#5A4430"
-                android:textColorHint="#6F6A66"
+                android:textColor="#5c3f1c"
+                android:textColorHint="#5c3f1c"
                 android:textSize="22sp" />
         </LinearLayout>
 
@@ -167,7 +174,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:background="@drawable/panel_blanco"
+            android:background="@drawable/cuadro_borde"
             android:orientation="vertical"
             android:paddingHorizontal="22dp"
             android:paddingTop="18dp"

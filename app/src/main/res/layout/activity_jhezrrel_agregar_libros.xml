@@ -15,15 +15,29 @@
         android:paddingTop="34dp"
         android:paddingBottom="42dp">
 
-        <TextView
-            android:id="@+id/btnVolver"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_height="44dp"
             android:gravity="center_vertical"
-            android:text="&lt;"
-            android:textColor="#6F471B"
-            android:textSize="52sp"
-            android:textStyle="bold" />
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/btnVolver"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_flecha_atras"
+                android:contentDescription="Regresar"
+                android:tint="#5c3f1c" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Agregar Libro"
+                android:textColor="#5c3f1c"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+        </LinearLayout>
 
         <ImageView
             android:layout_width="190dp"
@@ -32,21 +46,11 @@
             android:scaleType="fitCenter"
             android:src="@drawable/logo_claro" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:fontFamily="sans-serif"
-            android:text="Agregar Libro"
-            android:textColor="#5A4430"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="34dp"
-            android:background="@drawable/panel_blanco"
+            android:background="@drawable/cuadro_borde"
             android:orientation="vertical"
             android:padding="10dp">
 
@@ -54,7 +58,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Nombre del libro"
-                android:textColor="#7A6A5A"
+                android:textColor="#5c3f1c"
                 android:textSize="14sp" />
 
             <EditText
@@ -66,8 +70,8 @@
                 android:hint="Ingrese el Nombre del libro..."
                 android:inputType="textCapWords"
                 android:paddingHorizontal="10dp"
-                android:textColor="#5A4430"
-                android:textColorHint="#9C8E80"
+                android:textColor="#5c3f1c"
+                android:textColorHint="#5c3f1c"
                 android:textSize="14sp" />
 
             <TextView
@@ -75,7 +79,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="Autor del libro"
-                android:textColor="#7A6A5A"
+                android:textColor="#5c3f1c"
                 android:textSize="14sp" />
 
             <EditText
@@ -87,8 +91,8 @@
                 android:hint="Ingrese el Autor del libro..."
                 android:inputType="textCapWords"
                 android:paddingHorizontal="10dp"
-                android:textColor="#5A4430"
-                android:textColorHint="#9C8E80"
+                android:textColor="#5c3f1c"
+                android:textColorHint="#5c3f1c"
                 android:textSize="14sp" />
 
             <LinearLayout
@@ -109,7 +113,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Categoria"
-                        android:textColor="#7A6A5A"
+                        android:textColor="#5c3f1c"
                         android:textSize="14sp" />
 
                     <Spinner
@@ -131,7 +135,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Ano creado"
-                        android:textColor="#7A6A5A"
+                        android:textColor="#5c3f1c"
                         android:textSize="14sp" />
 
                     <EditText
@@ -144,8 +148,8 @@
                         android:inputType="number"
                         android:maxLength="4"
                         android:paddingHorizontal="10dp"
-                        android:textColor="#5A4430"
-                        android:textColorHint="#9C8E80"
+                        android:textColor="#5c3f1c"
+                        android:textColorHint="#5c3f1c"
                         android:textSize="14sp" />
                 </LinearLayout>
             </LinearLayout>
@@ -155,7 +159,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="Sinopsis"
-                android:textColor="#7A6A5A"
+                android:textColor="#5c3f1c"
                 android:textSize="14sp" />
 
             <EditText
@@ -168,8 +172,8 @@
                 android:hint="Escriba la sinopsis del libro"
                 android:inputType="textMultiLine"
                 android:padding="10dp"
-                android:textColor="#5A4430"
-                android:textColorHint="#9C8E80"
+                android:textColor="#5c3f1c"
+                android:textColorHint="#5c3f1c"
                 android:textSize="14sp" />
         </LinearLayout>
 
@@ -178,11 +182,11 @@
             android:layout_width="match_parent"
             android:layout_height="52dp"
             android:layout_marginTop="18dp"
-            android:background="@drawable/panel_blanco"
+            android:background="@drawable/cuadro_borde"
             android:gravity="center_vertical"
             android:paddingHorizontal="14dp"
             android:text="Ingrese la imagen                                      [ ]"
-            android:textColor="#8A7866"
+            android:textColor="#5c3f1c"
             android:textSize="15sp" />
 
         <LinearLayout
@@ -192,31 +196,47 @@
             android:orientation="horizontal"
             android:weightSum="2">
 
-            <Button
+            <LinearLayout
                 android:id="@+id/btnCancelar"
                 android:layout_width="0dp"
                 android:layout_height="54dp"
                 android:layout_marginEnd="20dp"
                 android:layout_weight="1"
                 android:background="@drawable/boton_claro_borde"
-                android:text="Cancelar"
-                android:textAllCaps="false"
-                android:textColor="#5A4430"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="horizontal">
 
-            <Button
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cancelar"
+                    android:textColor="#5c3f1c"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:id="@+id/btnGuardar"
                 android:layout_width="0dp"
                 android:layout_height="54dp"
                 android:layout_marginStart="20dp"
                 android:layout_weight="1"
                 android:background="@drawable/boton_cafe"
-                android:text="Guardar Libro"
-                android:textAllCaps="false"
-                android:textColor="@color/blanco"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Guardar Libro"
+                    android:textColor="#f6eacc"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 </ScrollView>
