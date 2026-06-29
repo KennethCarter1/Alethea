@@ -107,13 +107,14 @@
                     android:orientation="horizontal"
                     android:paddingHorizontal="12dp">
 
-                    <TextView
+                    <ImageView
                         android:layout_width="38dp"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:text="*"
-                        android:textColor="#5c3f1c"
-                        android:textSize="34sp" />
+                        android:src="@drawable/ic_sol"
+                        android:scaleType="centerInside"
+                        android:padding="6dp"
+                        android:tint="#5c3f1c" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -142,13 +143,14 @@
                     android:orientation="horizontal"
                     android:paddingHorizontal="12dp">
 
-                    <TextView
+                    <ImageView
                         android:layout_width="38dp"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:text="C"
-                        android:textColor="#5c3f1c"
-                        android:textSize="28sp" />
+                        android:src="@drawable/ic_luna"
+                        android:scaleType="centerInside"
+                        android:padding="6dp"
+                        android:tint="#5c3f1c" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -183,15 +185,154 @@
                 android:textColor="#5c3f1c"
                 android:textSize="24sp" />
 
-            <TextView
-                android:id="@+id/tvIntegrantes"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="22dp"
-                android:lineSpacingExtra="16dp"
-                android:text="@string/jhez_lista_integrantes"
-                android:textColor="#5c3f1c"
-                android:textSize="20sp" />
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingVertical="6dp">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/ic_perfil"
+                        android:tint="#5c3f1c"
+                        android:contentDescription="" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/jhez_integrante1"
+                        android:textColor="#5c3f1c"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/jhez_cedula1"
+                        android:textColor="#5c3f1c"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#5c3f1c"
+                    android:layout_marginVertical="2dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingVertical="6dp">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/ic_perfil"
+                        android:tint="#5c3f1c"
+                        android:contentDescription="" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/jhez_integrante2"
+                        android:textColor="#5c3f1c"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/jhez_cedula2"
+                        android:textColor="#5c3f1c"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#5c3f1c"
+                    android:layout_marginVertical="2dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingVertical="6dp">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/ic_perfil"
+                        android:tint="#5c3f1c"
+                        android:contentDescription="" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/jhez_integrante3"
+                        android:textColor="#5c3f1c"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/jhez_cedula3"
+                        android:textColor="#5c3f1c"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#5c3f1c"
+                    android:layout_marginVertical="2dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingVertical="6dp">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/ic_perfil"
+                        android:tint="#5c3f1c"
+                        android:contentDescription="" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/jhez_integrante4"
+                        android:textColor="#5c3f1c"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/jhez_cedula4"
+                        android:textColor="#5c3f1c"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </LinearLayout>
 
             <TextView
                 android:layout_width="match_parent"

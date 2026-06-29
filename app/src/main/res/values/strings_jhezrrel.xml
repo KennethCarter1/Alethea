@@ -27,7 +27,14 @@
     <string name="jhez_modo_claro">Modo Claro</string>
     <string name="jhez_modo_oscuro">Modo Oscuro</string>
     <string name="jhez_integrantes">Integrantes</string>
-    <string name="jhez_lista_integrantes">( )  Jhezrrel Delgado    X-XXXX-XXXX\n( )  Edgar Rosario      X-XXXX-XXXX\n( )  Rachel Mejia       X-XXXX-XXXX\n( )  Kenneth Carter     X-XXXX-XXXX</string>
+    <string name="jhez_integrante1">Jhezrrel Delgado</string>
+    <string name="jhez_cedula1">X-XXXX-XXXX</string>
+    <string name="jhez_integrante2">Edgar Rosario</string>
+    <string name="jhez_cedula2">X-XXXX-XXXX</string>
+    <string name="jhez_integrante3">Rachel Mejia</string>
+    <string name="jhez_cedula3">X-XXXX-XXXX</string>
+    <string name="jhez_integrante4">Kenneth Carter</string>
+    <string name="jhez_cedula4">X-XXXX-XXXX</string>
     <string name="jhez_salon">Salón 1GS231</string>
     <string name="jhez_play">PLAY  |||||||||||||||||||||||||</string>
 

@@ -61,19 +61,6 @@
                 android:textColor="#5c3f1c"
                 android:textSize="14sp" />
 
-            <EditText
-                android:id="@+id/etNombreLibro"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="6dp"
-                android:background="@drawable/campo_borde"
-                android:hint="@string/jhez_hint_nombre"
-                android:inputType="textCapWords"
-                android:paddingHorizontal="10dp"
-                android:textColor="#5c3f1c"
-                android:textColorHint="#5c3f1c"
-                android:textSize="14sp" />
-
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -153,6 +140,19 @@
                         android:textSize="14sp" />
                 </LinearLayout>
             </LinearLayout>
+
+            <EditText
+                android:id="@+id/etNombreLibro"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/campo_borde"
+                android:hint="@string/jhez_hint_nombre"
+                android:inputType="textCapWords"
+                android:paddingHorizontal="10dp"
+                android:textColor="#5c3f1c"
+                android:textColorHint="#5c3f1c"
+                android:textSize="14sp" />
 
             <TextView
                 android:layout_width="match_parent"
