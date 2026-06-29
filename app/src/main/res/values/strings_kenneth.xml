@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ===== COMPARTIDO ===== -->
+    <string name="ken_regresar">Regresar</string>
+    <string name="ken_buscar_libro">Buscar un Libro del Catálogo</string>
+
+    <!-- ===== PERFIL USUARIO ===== -->
+    <string name="ken_perfil">Perfil</string>
+    <string name="ken_total_libros">Total de libros</string>
+    <string name="ken_total_favoritos">Total de libros\nen favoritos</string>
+    <string name="ken_total_espera">Total de libros\nen espera</string>
+    <string name="ken_desc_libros">Libros</string>
+    <string name="ken_desc_favoritos">Favoritos</string>
+    <string name="ken_desc_espera">En espera</string>
+    <string name="ken_informacion_personal">Información Personal</string>
+    <string name="ken_nombre">Nombre</string>
+    <string name="ken_apellido">Apellido</string>
+    <string name="ken_correo">Correo</string>
+    <string name="ken_cedula">Cédula</string>
+    <string name="ken_nacionalidad">Nacionalidad</string>
+    <string name="ken_guardar_cambios">Guardar Cambios</string>
+    <string name="ken_cambiar_contrasena">Cambiar Contraseña</string>
+    <string name="ken_contrasena_actual">Ingresar contraseña actual</string>
+    <string name="ken_nueva_contrasena">Nueva contraseña</string>
+    <string name="ken_confirmar_contrasena">Confirmar contraseña</string>
+    <string name="ken_actualizar_contrasena">Actualizar Contraseña</string>
+
+    <!-- ===== MIS PRÉSTAMOS ===== -->
+    <string name="ken_mis_prestamos">Mis Préstamos</string>
+    <string name="ken_fecha_devolucion">Fecha de devolución:</string>
+    <string name="ken_fecha_prestamo">Fecha de préstamo:</string>
+    <string name="ken_fecha_solicitud">Fecha de solicitud</string>
+    <string name="ken_aceptada">Aceptada</string>
+    <string name="ken_sin_stock">Sin Stock</string>
+    <string name="ken_rechazado">Rechazado</string>
+    <string name="ken_motivo">Motivo</string>
+    <string name="ken_motivo_corto">Ejemplar dañado</string>
+    <string name="ken_motivo_rechazo">Usuario suspendido</string>
+    <string name="ken_muestra_titulo">Cien años de soledad</string>
+    <string name="ken_muestra_autor">Gabriel García Márquez</string>
+    <string name="ken_muestra_fecha_pres">15/06/2026</string>
+    <string name="ken_muestra_fecha_dev">25/07/2026</string>
+    <string name="ken_muestra_titulo2">El principito</string>
+    <string name="ken_muestra_autor2">Antoine de Saint-Exupéry</string>
+    <string name="ken_muestra_fecha_sol">10/06/2026</string>
+    <string name="ken_muestra_titulo3">Don Quijote de la Mancha</string>
+    <string name="ken_muestra_autor3">Miguel de Cervantes</string>
+    <string name="ken_muestra_fecha_sol2">05/06/2026</string>
+
+    <!-- ===== FAVORITOS ===== -->
+    <string name="ken_favoritos">Favoritos</string>
+    <string name="ken_fav_titulo">Cien años de soledad</string>
+    <string name="ken_fav_autor">Gabriel García Márquez</string>
+    <string name="ken_fav_categoria">Novela</string>
+    <string name="ken_fav_anio">1967</string>
+    <string name="ken_fav_titulo2">El principito</string>
+    <string name="ken_fav_autor2">Antoine de Saint-Exupéry</string>
+    <string name="ken_fav_categoria2">Infantil</string>
+    <string name="ken_fav_anio2">1943</string>
+    <string name="ken_fav_titulo3">1984</string>
+    <string name="ken_fav_autor3">George Orwell</string>
+    <string name="ken_fav_categoria3">Distopía</string>
+    <string name="ken_fav_anio3">1949</string>
+
+    <!-- ===== DETALLE LIBRO ===== -->
+    <string name="ken_detalle_libro">Detalle del Libro</string>
+    <string name="ken_det_titulo">Cien años de soledad</string>
+    <string name="ken_det_autor">Gabriel García Márquez</string>
+    <string name="ken_det_categoria">Novela</string>
+    <string name="ken_det_anio">1967</string>
+    <string name="ken_solicitar_libro">Solicitar Libro</string>
+    <string name="ken_sinopsis">Sinopsis</string>
+    <string name="ken_sinopsis_texto">"Cien años de soledad" narra la historia de la familia Buendía en el pueblo ficticio de Macondo, a lo largo de siete generaciones. Entre realismo mágico y tragedia, la novela explora el amor, la soledad, el poder y la fatalidad en un ciclo interminable donde el pasado y el futuro se entrelazan.</string>
+
+    <!-- ===== CATÁLOGO DE LIBROS ===== -->
+    <string name="ken_catalogo_titulo">Catálogo de Libros</string>
+    <string name="ken_cat_titulo1">Cien años de soledad</string>
+    <string name="ken_cat_autor1">Gabriel García Márquez</string>
+    <string name="ken_cat_categoria1">Novela</string>
+    <string name="ken_cat_anio1">1967</string>
+    <string name="ken_cat_titulo2">El principito</string>
+    <string name="ken_cat_autor2">Antoine de Saint-Exupéry</string>
+    <string name="ken_cat_categoria2">Infantil</string>
+    <string name="ken_cat_anio2">1943</string>
+    <string name="ken_cat_titulo3">1984</string>
+    <string name="ken_cat_autor3">George Orwell</string>
+    <string name="ken_cat_categoria3">Distopía</string>
+    <string name="ken_cat_anio3">1949</string>
+    <string name="ken_cat_titulo4">La sombra del viento</string>
+    <string name="ken_cat_autor4">Carlos Ruiz Zafón</string>
+    <string name="ken_cat_categoria4">Misterio</string>
+    <string name="ken_cat_anio4">2001</string>
+
+</resources>
