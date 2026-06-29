@@ -26,14 +26,14 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/ic_flecha_atras"
-                android:contentDescription="Regresar"
+                android:contentDescription="@string/jhez_regresar"
                 android:tint="#5c3f1c" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Agregar Libro"
+                android:text="@string/jhez_agregar_libro"
                 android:textColor="#5c3f1c"
                 android:textSize="22sp"
                 android:textStyle="bold" />
@@ -57,7 +57,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Nombre del libro"
+                android:text="@string/jhez_nombre_libro"
                 android:textColor="#5c3f1c"
                 android:textSize="14sp" />
 
@@ -67,7 +67,7 @@
                 android:layout_height="48dp"
                 android:layout_marginTop="6dp"
                 android:background="@drawable/campo_borde"
-                android:hint="Ingrese el Nombre del libro..."
+                android:hint="@string/jhez_hint_nombre"
                 android:inputType="textCapWords"
                 android:paddingHorizontal="10dp"
                 android:textColor="#5c3f1c"
@@ -78,7 +78,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="Autor del libro"
+                android:text="@string/jhez_autor_libro"
                 android:textColor="#5c3f1c"
                 android:textSize="14sp" />
 
@@ -88,7 +88,7 @@
                 android:layout_height="48dp"
                 android:layout_marginTop="6dp"
                 android:background="@drawable/campo_borde"
-                android:hint="Ingrese el Autor del libro..."
+                android:hint="@string/jhez_hint_autor"
                 android:inputType="textCapWords"
                 android:paddingHorizontal="10dp"
                 android:textColor="#5c3f1c"
@@ -112,7 +112,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Categoria"
+                        android:text="@string/jhez_categoria"
                         android:textColor="#5c3f1c"
                         android:textSize="14sp" />
 
@@ -134,7 +134,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Ano creado"
+                        android:text="@string/jhez_anio_creado"
                         android:textColor="#5c3f1c"
                         android:textSize="14sp" />
 
@@ -144,7 +144,7 @@
                         android:layout_height="48dp"
                         android:layout_marginTop="6dp"
                         android:background="@drawable/campo_borde"
-                        android:hint="Ingrese el ano"
+                        android:hint="@string/jhez_hint_anio"
                         android:inputType="number"
                         android:maxLength="4"
                         android:paddingHorizontal="10dp"
@@ -158,7 +158,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="Sinopsis"
+                android:text="@string/jhez_sinopsis"
                 android:textColor="#5c3f1c"
                 android:textSize="14sp" />
 
@@ -169,7 +169,7 @@
                 android:layout_marginTop="6dp"
                 android:background="@drawable/campo_borde"
                 android:gravity="top"
-                android:hint="Escriba la sinopsis del libro"
+                android:hint="@string/jhez_hint_sinopsis"
                 android:inputType="textMultiLine"
                 android:padding="10dp"
                 android:textColor="#5c3f1c"
@@ -185,7 +185,7 @@
             android:background="@drawable/cuadro_borde"
             android:gravity="center_vertical"
             android:paddingHorizontal="14dp"
-            android:text="Ingrese la imagen                                      [ ]"
+            android:text="@string/jhez_ingrese_imagen"
             android:textColor="#5c3f1c"
             android:textSize="15sp" />
 
@@ -211,7 +211,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Cancelar"
+                    android:text="@string/jhez_cancelar"
                     android:textColor="#5c3f1c"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -232,7 +232,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Guardar Libro"
+                    android:text="@string/jhez_guardar_libro"
                     android:textColor="#f6eacc"
                     android:textSize="16sp"
                     android:textStyle="bold" />

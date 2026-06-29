@@ -26,14 +26,14 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:src="@drawable/ic_flecha_atras"
-                    android:contentDescription="Regresar"
+                    android:contentDescription="@string/jhez_regresar"
                     android:tint="#5c3f1c" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:text="Gestion de Autores"
+                    android:text="@string/jhez_gestion_autores"
                     android:textColor="#5c3f1c"
                     android:textSize="22sp"
                     android:textStyle="bold" />
@@ -65,14 +65,13 @@
                 android:orientation="horizontal"
                 android:padding="10dp">
 
-                <TextView
+                <ImageView
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:background="@drawable/circulo_crema"
-                    android:gravity="center"
-                    android:text="( )"
-                    android:textColor="#5c3f1c"
-                    android:textSize="16sp" />
+                    android:padding="10dp"
+                    android:src="@drawable/ic_perfil"
+                    android:tint="#5c3f1c" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -93,7 +92,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Total de Autores"
+                        android:text="@string/jhez_total_autores"
                         android:textColor="#5c3f1c"
                         android:textSize="13sp" />
                 </LinearLayout>
@@ -135,7 +134,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Total de Libros"
+                        android:text="@string/jhez_total_libros"
                         android:textColor="#5c3f1c"
                         android:textSize="13sp" />
                 </LinearLayout>
@@ -161,7 +160,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@android:color/transparent"
-                android:hint="Buscar un libro del catalogo"
+                android:hint="@string/jhez_hint_buscar_autor"
                 android:inputType="text"
                 android:paddingStart="12dp"
                 android:textColor="#5c3f1c"

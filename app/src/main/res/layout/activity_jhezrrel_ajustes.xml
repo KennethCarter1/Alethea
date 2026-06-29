@@ -25,14 +25,14 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/ic_flecha_atras"
-                android:contentDescription="Regresar"
+                android:contentDescription="@string/jhez_regresar"
                 android:tint="#5c3f1c" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
-                android:text="Ajustes"
+                android:text="@string/jhez_ajustes"
                 android:textColor="#5c3f1c"
                 android:textSize="31sp" />
         </LinearLayout>
@@ -47,15 +47,13 @@
             android:orientation="horizontal"
             android:paddingHorizontal="12dp">
 
-            <TextView
+            <ImageView
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:background="@drawable/circulo_crema"
-                android:gravity="center"
-                android:text="]"
-                android:textColor="#5c3f1c"
-                android:textSize="30sp"
-                android:textStyle="bold" />
+                android:padding="10dp"
+                android:src="@drawable/ic_candado"
+                android:tint="#5c3f1c" />
 
             <TextView
                 android:layout_width="0dp"
@@ -63,18 +61,9 @@
                 android:layout_marginStart="14dp"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
-                android:text="Cerrar Sesion"
+                android:text="@string/jhez_cerrar_sesion"
                 android:textColor="#5c3f1c"
                 android:textSize="23sp" />
-
-            <TextView
-                android:layout_width="44dp"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text=">"
-                android:textColor="#5c3f1c"
-                android:textSize="44sp"
-                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
@@ -88,7 +77,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Modo de Apariencia"
+                android:text="@string/jhez_modo_apariencia"
                 android:textColor="#5c3f1c"
                 android:textSize="24sp" />
 
@@ -96,7 +85,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Elige el modo de tu preferencia"
+                android:text="@string/jhez_elige_modo"
                 android:textColor="#5c3f1c"
                 android:textSize="13sp" />
 
@@ -131,7 +120,7 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center_vertical"
-                        android:text="Modo Claro"
+                        android:text="@string/jhez_modo_claro"
                         android:textColor="#5c3f1c"
                         android:textSize="18sp" />
 
@@ -166,7 +155,7 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center_vertical"
-                        android:text="Modo Oscuro"
+                        android:text="@string/jhez_modo_oscuro"
                         android:textColor="#5c3f1c"
                         android:textSize="18sp" />
 
@@ -190,7 +179,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Integrantes"
+                android:text="@string/jhez_integrantes"
                 android:textColor="#5c3f1c"
                 android:textSize="24sp" />
 
@@ -200,7 +189,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="22dp"
                 android:lineSpacingExtra="16dp"
-                android:text="( )  Jhezrrel Delgado    X-XXXX-XXXX&#10;( )  Edgar Rosario      X-XXXX-XXXX&#10;( )  Rachel Mejia       X-XXXX-XXXX&#10;( )  Kenneth Carter     X-XXXX-XXXX"
+                android:text="@string/jhez_lista_integrantes"
                 android:textColor="#5c3f1c"
                 android:textSize="20sp" />
 
@@ -209,7 +198,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:gravity="center"
-                android:text="Salon 1GS231"
+                android:text="@string/jhez_salon"
                 android:textColor="#5c3f1c"
                 android:textSize="20sp" />
         </LinearLayout>
@@ -219,7 +208,7 @@
             android:layout_height="72dp"
             android:layout_marginTop="28dp"
             android:gravity="center"
-            android:text="PLAY  |||||||||||||||||||||||||"
+            android:text="@string/jhez_play"
             android:textColor="#5c3f1c"
             android:textSize="28sp" />
     </LinearLayout>

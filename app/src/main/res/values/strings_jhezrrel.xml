@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ===== COMPARTIDO ===== -->
+    <string name="jhez_regresar">Regresar</string>
+
+    <!-- ===== AGREGAR LIBROS ===== -->
+    <string name="jhez_agregar_libro">Agregar Libro</string>
+    <string name="jhez_nombre_libro">Nombre del libro</string>
+    <string name="jhez_hint_nombre">Ingrese el Nombre del libro...</string>
+    <string name="jhez_autor_libro">Autor del libro</string>
+    <string name="jhez_hint_autor">Ingrese el Autor del libro...</string>
+    <string name="jhez_categoria">Categoria</string>
+    <string name="jhez_anio_creado">Año creado</string>
+    <string name="jhez_hint_anio">Ingrese el año</string>
+    <string name="jhez_sinopsis">Sinopsis</string>
+    <string name="jhez_hint_sinopsis">Escriba la sinopsis del libro</string>
+    <string name="jhez_ingrese_imagen">Ingrese la imagen                                      [ ]</string>
+    <string name="jhez_cancelar">Cancelar</string>
+    <string name="jhez_guardar_libro">Guardar Libro</string>
+
+    <!-- ===== AJUSTES ===== -->
+    <string name="jhez_ajustes">Ajustes</string>
+    <string name="jhez_cerrar_sesion">Cerrar Sesión</string>
+    <string name="jhez_modo_apariencia">Modo de Apariencia</string>
+    <string name="jhez_elige_modo">Elige el modo de tu preferencia</string>
+    <string name="jhez_modo_claro">Modo Claro</string>
+    <string name="jhez_modo_oscuro">Modo Oscuro</string>
+    <string name="jhez_integrantes">Integrantes</string>
+    <string name="jhez_lista_integrantes">( )  Jhezrrel Delgado    X-XXXX-XXXX\n( )  Edgar Rosario      X-XXXX-XXXX\n( )  Rachel Mejia       X-XXXX-XXXX\n( )  Kenneth Carter     X-XXXX-XXXX</string>
+    <string name="jhez_salon">Salón 1GS231</string>
+    <string name="jhez_play">PLAY  |||||||||||||||||||||||||</string>
+
+    <!-- ===== GESTIÓN AUTORES ===== -->
+    <string name="jhez_gestion_autores">Gestión de Autores</string>
+    <string name="jhez_total_autores">Total de Autores</string>
+    <string name="jhez_total_libros">Total de Libros</string>
+    <string name="jhez_hint_buscar_autor">Buscar un libro del catálogo</string>
+
+    <!-- ===== GESTIÓN USUARIOS ===== -->
+    <string name="jhez_gestion_usuarios">Gestión de Usuarios</string>
+    <string name="jhez_total_usuarios">Total de Usuarios</string>
+    <string name="jhez_total_aceptados">Total de Aceptados</string>
+    <string name="jhez_hint_buscar_usuario">Buscar un usuario del catálogo</string>
+
+</resources>
