@@ -8,21 +8,21 @@ class AletheaBd(context: Context) : SQLiteOpenHelper(
     context,
     "Alethea.db",
     null,
-    1
+    2
 ) {
     override fun onCreate(db: SQLiteDatabase) {
         db.execSQL(
             """
             CREATE TABLE Usuarios(
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
-                nombre TEXT NOT NULL,
-                apellido TEXT NOT NULL,
-                correo TEXT NOT NULL,
-                cedula TEXT NOT NULL,
-                nacionalidad TEXT NOT NULL,
+                nombre TEXT,
+                apellido TEXT,
+                correo TEXT,
+                cedula TEXT,
+                nacionalidad TEXT,
                 usuario TEXT NOT NULL,
                 contrasena TEXT NOT NULL,
-                es_admin INTEGER NOT NULL
+                es_admin INTEGER DEFAULT 0
             )
             """.trimIndent()
         )
