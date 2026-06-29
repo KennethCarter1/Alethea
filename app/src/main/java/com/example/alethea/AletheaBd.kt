@@ -11,8 +11,6 @@ class AletheaBd(context: Context) : SQLiteOpenHelper(
     1
 ) {
     override fun onCreate(db: SQLiteDatabase) {
-        db.execSQL("PRAGMA foreign_keys = ON")
-
         db.execSQL(
             """
             CREATE TABLE Usuarios(
