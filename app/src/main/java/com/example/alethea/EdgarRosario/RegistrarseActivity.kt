@@ -1,5 +1,6 @@
 package com.example.alethea.EdgarRosario
 
+import android.content.ContentValues
 import android.content.Intent
 import android.os.Bundle
 import android.widget.EditText
@@ -37,7 +38,7 @@ class RegistrarseActivity : AppCompatActivity() {
             }
 
             val db = bd.writableDatabase
-            val valores = android.content.ContentValues().apply {
+            val valores = ContentValues().apply {
                 put("usuario", usuario)
                 put("contrasena", contrasena)
             }
