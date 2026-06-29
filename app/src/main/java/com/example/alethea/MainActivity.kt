@@ -3,7 +3,7 @@ package com.example.alethea
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.alethea.EdgarRosario.IniciarSesionActivity
+import com.example.alethea.EdgarRosario.InicioActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         val intent =
             Intent(
                 this,
-                IniciarSesionActivity::class.java
+                InicioActivity::class.java
             )
         startActivity(intent)
         finish()
