@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Generales -->
+    <string name="accion_atras">Atrás</string>
+    <string name="accion_cancelar">Cancelar</string>
+    <string name="accion_editar">Editar</string>
+    <string name="accion_eliminar">Eliminar</string>
+    <string name="accion_aceptar">Aceptar</string>
+    <string name="accion_rechazar">Rechazar</string>
+    <string name="valor_cero">0</string>
+    <string name="valor_cero_doble">00</string>
+
+    <!-- Reporte y Estadisticas -->
+    <string name="reporte_titulo">Reporte y Estadisticas</string>
+    <string name="reporte_usuarios">Total de Usuarios</string>
+    <string name="reporte_libros">Libros Registrados</string>
+    <string name="reporte_autores">Autores Registrados</string>
+    <string name="reporte_prestamos">Prestamos Realizados</string>
+    <string name="reporte_estadisticas_generales">Estadisticas Generales</string>
+    <string name="reporte_libros_por_categoria">Libros por categoria</string>
+    <string name="reporte_categoria_ejemplo">Categoria 1</string>
+    <string name="reporte_exportar_datos">EXPORTAR DATOS</string>
+
+    <!-- Editar Libro -->
+    <string name="editar_libro_titulo">Editar Libro</string>
+    <string name="editar_libro_nombre">Nombre del libro</string>
+    <string name="editar_libro_nombre_hint">Ingrese el Nombre del libro…</string>
+    <string name="editar_libro_autor">Autor del libro</string>
+    <string name="editar_libro_autor_hint">Ingrese el Autor del libro…</string>
+    <string name="editar_libro_categoria">Categoria</string>
+    <string name="editar_libro_categoria_hint">Ingrese la categoria</string>
+    <string name="editar_libro_anio">Año creado</string>
+    <string name="editar_libro_anio_hint">Ingrese la año</string>
+    <string name="editar_libro_sinopsis">Sinopsis</string>
+    <string name="editar_libro_sinopsis_hint">Escriba la sinopsis del libro</string>
+    <string name="editar_libro_imagen_hint">Ingrese la imagen</string>
+
+    <!-- Gestion de Libros -->
+    <string name="gestion_libros_titulo">Gestion de Libros</string>
+    <string name="gestion_libros_buscar_hint">Buscar un libro del catalogo</string>
+    <string name="gestion_libros_total">Total de libros</string>
+    <string name="gestion_libros_disponibles">Disponibles</string>
+    <string name="gestion_libros_prestados">Prestados</string>
+    <string name="gestion_libros_agregar">AGREGAR LIBROS</string>
+    <string name="gestion_libros_listado">Listado de libros</string>
+    <string name="item_libro_nombre_placeholder">Nombre del libro</string>
+    <string name="item_libro_autor_placeholder">Autor</string>
+    <string name="item_libro_categoria_placeholder">Categoria</string>
+    <string name="item_libro_anio_placeholder">Año</string>
+
+    <!-- Prestamos y Devoluciones -->
+    <string name="prestamos_titulo">Prestamos y Devoluciones</string>
+    <string name="prestamos_devoluciones_pendientes">Devoluciones Pendientes</string>
+    <string name="prestamos_pendientes">Prestamos Pendientes</string>
+    <string name="tabla_usuario">Usuario</string>
+    <string name="tabla_libro">Libro</string>
+    <string name="tabla_fecha_prestamo">Fecha de Prestamo</string>
+    <string name="tabla_fecha_limite">Fecha Limite</string>
+    <string name="tabla_estado">Estado</string>
+    <string name="tabla_fecha_solicitada">Fecha Solicitada</string>
+    <string name="tabla_accion">Accion</string>
+    <string name="item_usuario_placeholder">Usuario</string>
+    <string name="item_libro_placeholder">Libro</string>
+    <string name="item_fecha_placeholder">--/--/----</string>
+    <string name="estado_pendiente">Pendiente</string>
+
+</resources>
