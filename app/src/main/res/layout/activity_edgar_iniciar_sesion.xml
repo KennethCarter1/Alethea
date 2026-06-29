@@ -50,6 +50,7 @@
                 android:contentDescription="@string/login_usuario" />
 
             <EditText
+                android:id="@+id/etUsuario"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="@string/login_usuario"
@@ -80,6 +81,7 @@
                 android:contentDescription="@string/login_contrasena" />
 
             <EditText
+                android:id="@+id/etContrasena"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="@string/login_contrasena"
@@ -95,9 +97,12 @@
 
         <!-- Botón Iniciar Sesión -->
         <LinearLayout
+            android:id="@+id/btnIniciarSesion"
             android:layout_width="match_parent"
             android:layout_height="52dp"
             android:orientation="horizontal"
+            android:clickable="true"
+            android:focusable="true"
             android:gravity="center"
             android:background="@drawable/boton_oscuro"
             android:layout_marginBottom="16dp">
@@ -122,8 +127,11 @@
 
         <!-- Registrarse -->
         <TextView
+            android:id="@+id/btnRegistrarse"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
             android:fontFamily="sans-serif"
             android:text="@string/login_registrarse"
             android:textColor="@color/negro_suave"

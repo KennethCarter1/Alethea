@@ -21,6 +21,26 @@
             </intent-filter>
         </activity>
 
+        <!-- Edgar Rosario -->
+        <activity android:name=".EdgarRosario.InicioActivity" />
+        <activity android:name=".EdgarRosario.IniciarSesionActivity" />
+        <activity android:name=".EdgarRosario.BienvenidoUserActivity" />
+        <activity android:name=".EdgarRosario.BienvenidoAdminActivity" />
+        <activity android:name=".EdgarRosario.RegistrarseActivity" />
+
+        <!-- Carter Kenneth -->
+        <activity android:name=".CarterKenneth.FavoritosActivity" />
+        <activity android:name=".CarterKenneth.DetalleLibroActivity" />
+        <activity android:name=".CarterKenneth.CatalogoLibrosActivity" />
+        <activity android:name=".CarterKenneth.MisPrestamosActivity" />
+        <activity android:name=".CarterKenneth.PerfilUsuarioActivity" />
+
+        <!-- Mejia Rachel -->
+        <activity android:name=".MejiaRachel.ReporteEstadisticaActivity" />
+        <activity android:name=".MejiaRachel.PrestamosDevolucionesActivity" />
+        <activity android:name=".MejiaRachel.GestionLibrosActivity" />
+        <activity android:name=".MejiaRachel.EditarLibroActivity" />
+
         <!-- Jhezrrel Delgado -->
         <activity android:name=".DelgadoJhezrrel.AgregarLibrosActivity" />
         <activity android:name=".DelgadoJhezrrel.AjustesActivity" />

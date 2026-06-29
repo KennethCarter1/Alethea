@@ -54,6 +54,7 @@
 
             <!-- Catálogo de Libros -->
             <androidx.cardview.widget.CardView
+                android:id="@+id/btnCatalogo"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -111,6 +112,7 @@
 
             <!-- Mis Préstamos -->
             <androidx.cardview.widget.CardView
+                android:id="@+id/btnPrestamos"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -177,6 +179,7 @@
 
             <!-- Mi Perfil -->
             <androidx.cardview.widget.CardView
+                android:id="@+id/btnPerfil"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -235,6 +238,7 @@
 
             <!-- Favoritos -->
             <androidx.cardview.widget.CardView
+                android:id="@+id/btnFavoritos"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -294,6 +298,7 @@
 
         <!-- Fila 3: Ajustes centrado -->
         <androidx.cardview.widget.CardView
+            android:id="@+id/btnAjustes"
             android:layout_width="220dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"

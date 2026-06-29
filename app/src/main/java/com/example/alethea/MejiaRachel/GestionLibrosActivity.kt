@@ -31,5 +31,7 @@ class GestionLibrosActivity : AppCompatActivity() {
         )
 
         rvLibros.adapter = LibroAdapter(listaDePrueba)
+
+        findViewById<android.widget.ImageView>(R.id.btnAtras).setOnClickListener { finish() }
     }
 }

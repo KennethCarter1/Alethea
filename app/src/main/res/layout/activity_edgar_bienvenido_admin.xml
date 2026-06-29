@@ -54,6 +54,7 @@
             android:layout_marginBottom="12dp">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/btnGestionLibros"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -110,6 +111,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/btnPrestamosAdmin"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -175,6 +177,7 @@
             android:layout_marginBottom="12dp">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/btnGestionAutores"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -231,6 +234,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/btnReportes"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -298,6 +302,7 @@
             android:layout_marginBottom="12dp">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/btnGestionUsuarios"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -354,6 +359,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/btnAjustesAdmin"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
