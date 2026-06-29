@@ -35,7 +35,7 @@ class GestionAutoresActivity : AppCompatActivity() {
             insets
         }
 
-        findViewById<TextView>(R.id.btnVolver).setOnClickListener { finish() }
+        findViewById<android.widget.ImageView>(R.id.btnVolver).setOnClickListener { finish() }
         findViewById<TextView>(R.id.tvTotalAutores).text = autores.size.toString().padStart(2, '0')
         findViewById<TextView>(R.id.tvTotalLibros).text = autores.sumOf { it.libros }.toString()
 

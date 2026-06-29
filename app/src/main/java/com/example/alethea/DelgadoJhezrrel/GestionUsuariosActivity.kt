@@ -36,7 +36,7 @@ class GestionUsuariosActivity : AppCompatActivity() {
             insets
         }
 
-        findViewById<TextView>(R.id.btnVolver).setOnClickListener { finish() }
+        findViewById<android.widget.ImageView>(R.id.btnVolver).setOnClickListener { finish() }
         findViewById<TextView>(R.id.tvTotalUsuarios).text = usuarios.size.toString().padStart(2, '0')
         findViewById<TextView>(R.id.tvTotalAceptados).text = usuarios.count { it.aceptado }.toString().padStart(2, '0')
 

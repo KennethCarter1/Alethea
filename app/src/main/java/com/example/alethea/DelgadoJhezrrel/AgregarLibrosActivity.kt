@@ -26,7 +26,7 @@ class AgregarLibrosActivity : AppCompatActivity() {
             insets
         }
 
-        findViewById<TextView>(R.id.btnVolver).setOnClickListener { finish() }
+        findViewById<android.widget.ImageView>(R.id.btnVolver).setOnClickListener { finish() }
         findViewById<Button>(R.id.btnCancelar).setOnClickListener { finish() }
 
         val categorias = listOf("Novela", "Historia", "Ciencia", "Tecnologia", "Poesia")
