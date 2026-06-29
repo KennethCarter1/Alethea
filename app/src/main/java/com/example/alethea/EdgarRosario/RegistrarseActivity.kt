@@ -10,8 +10,6 @@ class RegistrarseActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edgar_registrarse)
 
-        findViewById<android.widget.ImageView>(R.id.btnAtras).setOnClickListener { finish() }
-
         findViewById<android.widget.TextView>(R.id.btnIniciarSesionLink).setOnClickListener {
             val intent =
                 Intent(
