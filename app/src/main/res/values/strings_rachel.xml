@@ -1,4 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="rachel_regresar">Regresar</string>
+    <string name="accion_atras">Atrás</string>
+    <string name="accion_cancelar">Cancelar</string>
+
+    <!-- Gestion Libros -->
+    <string name="gestion_libros_titulo">Gestión de Libros</string>
+    <string name="gestion_libros_buscar_hint">Buscar libro por nombre…</string>
+    <string name="gestion_libros_total">Total</string>
+    <string name="gestion_libros_disponibles">Disponibles</string>
+    <string name="gestion_libros_prestados">Prestados</string>
+    <string name="gestion_libros_agregar">+ Agregar Libro</string>
+    <string name="gestion_libros_listado">Listado de Libros</string>
+
+    <!-- Prestamos y Devoluciones -->
+    <string name="prestamos_titulo">Préstamos y Devoluciones</string>
+    <string name="prestamos_devoluciones_pendientes">Devoluciones Pendientes</string>
+    <string name="prestamos_pendientes">Préstamos Pendientes</string>
+    <string name="tabla_usuario">Usuario</string>
+    <string name="tabla_libro">Libro</string>
+    <string name="tabla_fecha_prestamo">Fecha Préstamo</string>
+    <string name="tabla_fecha_limite">Fecha Límite</string>
+    <string name="tabla_estado">Estado</string>
+    <string name="tabla_fecha_solicitada">Fecha Solicitada</string>
+    <string name="tabla_accion">Acción</string>
+
+    <!-- Editar Libro -->
+    <string name="editar_libro_titulo">Editar Libro</string>
+    <string name="editar_libro_nombre">Nombre del libro</string>
+    <string name="editar_libro_nombre_hint">Ingrese el nombre del libro</string>
+    <string name="editar_libro_autor">Autor del libro</string>
+    <string name="editar_libro_autor_hint">Ingrese el autor del libro</string>
+    <string name="editar_libro_categoria">Categoría</string>
+    <string name="editar_libro_categoria_hint">Seleccione categoría</string>
+    <string name="editar_libro_anio">Año</string>
+    <string name="editar_libro_anio_hint">2025</string>
+    <string name="editar_libro_sinopsis">Sinopsis</string>
+    <string name="editar_libro_sinopsis_hint">Describa la sinopsis del libro</string>
+    <string name="editar_libro_imagen_hint">Seleccione imagen del libro</string>
+
+    <!-- Reporte / Estadisticas -->
+    <string name="reporte_titulo">Reporte y Estadísticas</string>
+    <string name="reporte_usuarios">Usuarios</string>
+    <string name="reporte_libros">Libros</string>
+    <string name="reporte_autores">Autores</string>
+    <string name="reporte_prestamos">Préstamos</string>
+    <string name="reporte_estadisticas_generales">Estadísticas Generales</string>
+    <string name="reporte_libros_por_categoria">Libros por Categoría</string>
+    <string name="reporte_categoria_ejemplo">Novela (ejemplo)</string>
+    <string name="reporte_exportar_datos">Exportar datos</string>
+    <string name="valor_cero">0</string>
+    <string name="valor_cero_doble">0.0</string>
+
+    <!-- Items / Listas -->
+    <string name="item_usuario_placeholder">Usuario</string>
+    <string name="item_libro_placeholder">Nombre del libro</string>
+    <string name="item_fecha_placeholder">dd/mm/aaaa</string>
+    <string name="accion_aceptar">Aceptar</string>
+    <string name="accion_rechazar">Rechazar</string>
+    <string name="accion_editar">Editar</string>
+    <string name="accion_eliminar">Eliminar</string>
+    <string name="item_libro_nombre_placeholder">El Principito</string>
+    <string name="item_libro_autor_placeholder">Antoine de Saint-Exupéry</string>
+    <string name="item_libro_categoria_placeholder">Infantil</string>
+    <string name="item_libro_anio_placeholder">1943</string>
+    <string name="estado_pendiente">Pendiente</string>
 </resources>
