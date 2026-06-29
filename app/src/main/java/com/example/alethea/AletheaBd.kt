@@ -68,19 +68,7 @@ class AletheaBd(context: Context) : SQLiteOpenHelper(
             """.trimIndent()
         )
 
-        db.execSQL(
-            """
-            INSERT INTO Usuarios(nombre, apellido, correo, cedula, nacionalidad, usuario, contrasena, es_admin)
-            VALUES('kenneth', 'carter', 'kenntth@utp.ac.pa', '8-1001-1227', 'panamena', 'kenneth10', '10102003', 0)
-            """.trimIndent()
-        )
 
-        db.execSQL(
-            """
-            INSERT INTO Usuarios(nombre, apellido, correo, cedula, nacionalidad, usuario, contrasena, es_admin)
-            VALUES('kenneth', 'carter', 'kenntth@utp.ac.pa', '8-1001-1227', 'panamena', 'kenneth01', '10102003', 1)
-            """.trimIndent()
-        )
     }
 
     override fun onUpgrade(
