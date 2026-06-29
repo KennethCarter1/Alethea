@@ -20,6 +20,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Jhezrrel Delgado -->
+        <activity android:name=".DelgadoJhezrrel.AgregarLibrosActivity" />
+        <activity android:name=".DelgadoJhezrrel.AjustesActivity" />
+        <activity android:name=".DelgadoJhezrrel.GestionAutoresActivity" />
+        <activity android:name=".DelgadoJhezrrel.GestionUsuariosActivity" />
     </application>
 
 </manifest>

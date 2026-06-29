@@ -1,19 +1,228 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DelgadoJhezrrel.AjustesActivity">
+    android:background="@drawable/bg_claro"
+    android:fillViewport="true">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ajustes"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="44dp"
+        android:paddingBottom="44dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btnVolver"
+                android:layout_width="42dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="&lt;"
+                android:textColor="#6F471B"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="Ajustes"
+                android:textColor="#6F5A45"
+                android:textSize="31sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnCerrarSesion"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:layout_marginTop="58dp"
+            android:background="@drawable/panel_blanco"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="12dp">
+
+            <TextView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/circulo_crema"
+                android:gravity="center"
+                android:text="]"
+                android:textColor="#6F471B"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="14dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Cerrar Sesion"
+                android:textColor="#7A6A5A"
+                android:textSize="23sp" />
+
+            <TextView
+                android:layout_width="44dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text=">"
+                android:textColor="#6F471B"
+                android:textSize="44sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34dp"
+            android:background="@drawable/panel_blanco"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Modo de Apariencia"
+                android:textColor="#7A6A5A"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Elige el modo de tu preferencia"
+                android:textColor="#7A6A5A"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginTop="22dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:id="@+id/btnModoClaro"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/campo_borde_redondo"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="12dp">
+
+                    <TextView
+                        android:layout_width="38dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="*"
+                        android:textColor="#6F471B"
+                        android:textSize="34sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="Modo Claro"
+                        android:textColor="#7A6A5A"
+                        android:textSize="18sp" />
+
+                    <View
+                        android:id="@+id/radioClaro"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:background="@drawable/radio_activo" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnModoOscuro"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/campo_borde_redondo"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="12dp">
+
+                    <TextView
+                        android:layout_width="38dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="C"
+                        android:textColor="#6F471B"
+                        android:textSize="28sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="Modo Oscuro"
+                        android:textColor="#7A6A5A"
+                        android:textSize="18sp" />
+
+                    <View
+                        android:id="@+id/radioOscuro"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:background="@drawable/radio_inactivo" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/panel_blanco"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Integrantes"
+                android:textColor="#7A6A5A"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/tvIntegrantes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:lineSpacingExtra="16dp"
+                android:text="( )  Jhezrrel Delgado    X-XXXX-XXXX&#10;( )  Edgar Rosario      X-XXXX-XXXX&#10;( )  Rachel Mejia       X-XXXX-XXXX&#10;( )  Kenneth Carter     X-XXXX-XXXX"
+                android:textColor="#6F5A45"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:text="Salon 1GS231"
+                android:textColor="#6F5A45"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:layout_marginTop="28dp"
+            android:gravity="center"
+            android:text="PLAY  |||||||||||||||||||||||||"
+            android:textColor="#6F471B"
+            android:textSize="28sp" />
+    </LinearLayout>
+</ScrollView>
