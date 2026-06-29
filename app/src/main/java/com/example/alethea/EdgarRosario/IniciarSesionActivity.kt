@@ -11,11 +11,21 @@ class IniciarSesionActivity : AppCompatActivity() {
         setContentView(R.layout.activity_edgar_iniciar_sesion)
 
         findViewById<android.widget.LinearLayout>(R.id.btnIniciarSesion).setOnClickListener {
-            startActivity(Intent(this, BienvenidoUserActivity::class.java))
+            val intent =
+                Intent(
+                    this,
+                    BienvenidoUserActivity::class.java
+                )
+            startActivity(intent)
         }
 
         findViewById<android.widget.TextView>(R.id.btnRegistrarse).setOnClickListener {
-            startActivity(Intent(this, RegistrarseActivity::class.java))
+            val intent =
+                Intent(
+                    this,
+                    RegistrarseActivity::class.java
+                )
+            startActivity(intent)
         }
     }
 }

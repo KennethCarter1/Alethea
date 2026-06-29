@@ -13,7 +13,12 @@ class DetalleLibroActivity : AppCompatActivity() {
         findViewById<android.widget.ImageView>(R.id.btnAtras).setOnClickListener { finish() }
 
         findViewById<android.widget.LinearLayout>(R.id.btnSolicitarLibro).setOnClickListener {
-            startActivity(Intent(this, MisPrestamosActivity::class.java))
+            val intent =
+                Intent(
+                    this,
+                    MisPrestamosActivity::class.java
+                )
+            startActivity(intent)
         }
     }
 }

@@ -17,22 +17,52 @@ class BienvenidoAdminActivity : AppCompatActivity() {
         setContentView(R.layout.activity_edgar_bienvenido_admin)
 
         findViewById<androidx.cardview.widget.CardView>(R.id.btnGestionLibros).setOnClickListener {
-            startActivity(Intent(this, GestionLibrosActivity::class.java))
+            val intent =
+                Intent(
+                    this,
+                    GestionLibrosActivity::class.java
+                )
+            startActivity(intent)
         }
         findViewById<androidx.cardview.widget.CardView>(R.id.btnPrestamosAdmin).setOnClickListener {
-            startActivity(Intent(this, PrestamosDevolucionesActivity::class.java))
+            val intent =
+                Intent(
+                    this,
+                    PrestamosDevolucionesActivity::class.java
+                )
+            startActivity(intent)
         }
         findViewById<androidx.cardview.widget.CardView>(R.id.btnGestionAutores).setOnClickListener {
-            startActivity(Intent(this, GestionAutoresActivity::class.java))
+            val intent =
+                Intent(
+                    this,
+                    GestionAutoresActivity::class.java
+                )
+            startActivity(intent)
         }
         findViewById<androidx.cardview.widget.CardView>(R.id.btnReportes).setOnClickListener {
-            startActivity(Intent(this, ReporteEstadisticaActivity::class.java))
+            val intent =
+                Intent(
+                    this,
+                    ReporteEstadisticaActivity::class.java
+                )
+            startActivity(intent)
         }
         findViewById<androidx.cardview.widget.CardView>(R.id.btnGestionUsuarios).setOnClickListener {
-            startActivity(Intent(this, GestionUsuariosActivity::class.java))
+            val intent =
+                Intent(
+                    this,
+                    GestionUsuariosActivity::class.java
+                )
+            startActivity(intent)
         }
         findViewById<androidx.cardview.widget.CardView>(R.id.btnAjustesAdmin).setOnClickListener {
-            startActivity(Intent(this, AjustesActivity::class.java))
+            val intent =
+                Intent(
+                    this,
+                    AjustesActivity::class.java
+                )
+            startActivity(intent)
         }
     }
 }

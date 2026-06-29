@@ -38,7 +38,11 @@ class AjustesActivity : AppCompatActivity() {
         findViewById<LinearLayout>(R.id.btnModoClaro).setOnClickListener { seleccionarModo(true) }
         findViewById<LinearLayout>(R.id.btnModoOscuro).setOnClickListener { seleccionarModo(false) }
         findViewById<LinearLayout>(R.id.btnCerrarSesion).setOnClickListener {
-            val intent = Intent(this, InicioActivity::class.java)
+            val intent =
+                Intent(
+                    this,
+                    InicioActivity::class.java
+                )
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
         }

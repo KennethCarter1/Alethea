@@ -13,16 +13,36 @@ class CatalogoLibrosActivity : AppCompatActivity() {
         findViewById<android.widget.ImageView>(R.id.btnAtras).setOnClickListener { finish() }
 
         findViewById<android.widget.LinearLayout>(R.id.catCard1).setOnClickListener {
-            startActivity(Intent(this, DetalleLibroActivity::class.java))
+            val intent =
+                Intent(
+                    this,
+                    DetalleLibroActivity::class.java
+                )
+            startActivity(intent)
         }
         findViewById<android.widget.LinearLayout>(R.id.catCard2).setOnClickListener {
-            startActivity(Intent(this, DetalleLibroActivity::class.java))
+            val intent =
+                Intent(
+                    this,
+                    DetalleLibroActivity::class.java
+                )
+            startActivity(intent)
         }
         findViewById<android.widget.LinearLayout>(R.id.catCard3).setOnClickListener {
-            startActivity(Intent(this, DetalleLibroActivity::class.java))
+            val intent =
+                Intent(
+                    this,
+                    DetalleLibroActivity::class.java
+                )
+            startActivity(intent)
         }
         findViewById<android.widget.LinearLayout>(R.id.catCard4).setOnClickListener {
-            startActivity(Intent(this, DetalleLibroActivity::class.java))
+            val intent =
+                Intent(
+                    this,
+                    DetalleLibroActivity::class.java
+                )
+            startActivity(intent)
         }
     }
 }

@@ -16,19 +16,44 @@ class BienvenidoUserActivity : AppCompatActivity() {
         setContentView(R.layout.activity_edgar_bienvenido_user)
 
         findViewById<androidx.cardview.widget.CardView>(R.id.btnCatalogo).setOnClickListener {
-            startActivity(Intent(this, CatalogoLibrosActivity::class.java))
+            val intent =
+                Intent(
+                    this,
+                    CatalogoLibrosActivity::class.java
+                )
+            startActivity(intent)
         }
         findViewById<androidx.cardview.widget.CardView>(R.id.btnPrestamos).setOnClickListener {
-            startActivity(Intent(this, MisPrestamosActivity::class.java))
+            val intent =
+                Intent(
+                    this,
+                    MisPrestamosActivity::class.java
+                )
+            startActivity(intent)
         }
         findViewById<androidx.cardview.widget.CardView>(R.id.btnPerfil).setOnClickListener {
-            startActivity(Intent(this, PerfilUsuarioActivity::class.java))
+            val intent =
+                Intent(
+                    this,
+                    PerfilUsuarioActivity::class.java
+                )
+            startActivity(intent)
         }
         findViewById<androidx.cardview.widget.CardView>(R.id.btnFavoritos).setOnClickListener {
-            startActivity(Intent(this, FavoritosActivity::class.java))
+            val intent =
+                Intent(
+                    this,
+                    FavoritosActivity::class.java
+                )
+            startActivity(intent)
         }
         findViewById<androidx.cardview.widget.CardView>(R.id.btnAjustes).setOnClickListener {
-            startActivity(Intent(this, AjustesActivity::class.java))
+            val intent =
+                Intent(
+                    this,
+                    AjustesActivity::class.java
+                )
+            startActivity(intent)
         }
     }
 }
