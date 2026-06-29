@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
+import com.example.alethea.MusicManager
 import com.example.alethea.R
 
 class InicioActivity : AppCompatActivity() {
@@ -11,6 +12,8 @@ class InicioActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edgar_inicio)
         supportActionBar?.hide()
+
+        MusicManager.detener()
 
         val btnIniciarSesion = findViewById<LinearLayout>(R.id.btnIniciarSesion)
         btnIniciarSesion.setOnClickListener {

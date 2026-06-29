@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.alethea.DelgadoJhezrrel.AjustesActivity
+import com.example.alethea.MusicManager
 import com.example.alethea.DelgadoJhezrrel.GestionAutoresActivity
 import com.example.alethea.DelgadoJhezrrel.GestionUsuariosActivity
 import com.example.alethea.MejiaRachel.GestionLibrosActivity
@@ -15,6 +16,8 @@ class BienvenidoAdminActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edgar_bienvenido_admin)
+
+        MusicManager.iniciar(this)
 
         findViewById<androidx.cardview.widget.CardView>(R.id.btnGestionLibros).setOnClickListener {
             val intent =

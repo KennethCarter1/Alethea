@@ -36,7 +36,8 @@
     <string name="jhez_integrante4">Kenneth Carter</string>
     <string name="jhez_cedula4">X-XXXX-XXXX</string>
     <string name="jhez_salon">Salón 1GS231</string>
-    <string name="jhez_play">PLAY  |||||||||||||||||||||||||</string>
+    <string name="jhez_play">Reproducir</string>
+    <string name="jhez_musica">Música de fondo</string>
 
     <!-- ===== GESTIÓN AUTORES ===== -->
     <string name="jhez_gestion_autores">Gestión de Autores</string>

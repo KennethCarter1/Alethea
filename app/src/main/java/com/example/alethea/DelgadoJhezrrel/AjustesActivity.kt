@@ -5,12 +5,14 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.SeekBar
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.alethea.EdgarRosario.InicioActivity
+import com.example.alethea.MusicManager
 import com.example.alethea.R
 
 class AjustesActivity : AppCompatActivity() {
@@ -38,6 +40,7 @@ class AjustesActivity : AppCompatActivity() {
         findViewById<LinearLayout>(R.id.btnModoClaro).setOnClickListener { seleccionarModo(true) }
         findViewById<LinearLayout>(R.id.btnModoOscuro).setOnClickListener { seleccionarModo(false) }
         findViewById<LinearLayout>(R.id.btnCerrarSesion).setOnClickListener {
+            MusicManager.detener()
             val intent =
                 Intent(
                     this,
@@ -46,5 +49,36 @@ class AjustesActivity : AppCompatActivity() {
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
         }
+
+        val btnPlay = findViewById<ImageView>(R.id.btnPlay)
+        val seekBar = findViewById<SeekBar>(R.id.seekBarVolumen)
+
+        actualizarIconoPlay(btnPlay)
+
+        btnPlay.setOnClickListener {
+            if (MusicManager.estaReproduciendo()) {
+                MusicManager.pausar()
+            } else {
+                MusicManager.iniciar(this)
+            }
+            actualizarIconoPlay(btnPlay)
+        }
+
+        seekBar.progress = (MusicManager.getVolumen() * 100).toInt()
+
+        seekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+                MusicManager.setVolumen(progress / 100f)
+            }
+            override fun onStartTrackingTouch(seekBar: SeekBar?) {}
+            override fun onStopTrackingTouch(seekBar: SeekBar?) {}
+        })
+    }
+
+    private fun actualizarIconoPlay(btnPlay: ImageView) {
+        btnPlay.setImageResource(
+            if (MusicManager.estaReproduciendo()) R.drawable.ic_pausa
+            else R.drawable.ic_play
+        )
     }
 }
