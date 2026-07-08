@@ -11,17 +11,12 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.alethea.AletheaBd
 import com.example.alethea.R
 
 class GestionAutoresActivity : AppCompatActivity() {
-    private val autores = listOf(
-        Autor("Kenneth Carter", 72),
-        Autor("Edgar Rosario", 18),
-        Autor("Rachel Mejia", 24),
-        Autor("Jhezrrel Delgado", 15),
-        Autor("Isabel Allende", 41),
-        Autor("Gabriel Garcia Marquez", 33)
-    )
+    private val bd by lazy { AletheaBd(this) }
+    private var autores = listOf<Autor>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,10 +31,7 @@ class GestionAutoresActivity : AppCompatActivity() {
         }
 
         findViewById<android.widget.ImageView>(R.id.btnVolver).setOnClickListener { finish() }
-        findViewById<TextView>(R.id.tvTotalAutores).text = autores.size.toString().padStart(2, '0')
-        findViewById<TextView>(R.id.tvTotalLibros).text = autores.sumOf { it.libros }.toString()
-
-        renderAutores(autores)
+        cargarAutores()
         findViewById<EditText>(R.id.etBuscarAutor).addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) = Unit
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
@@ -48,6 +40,25 @@ class GestionAutoresActivity : AppCompatActivity() {
             }
             override fun afterTextChanged(s: Editable?) = Unit
         })
+    }
+
+    private fun cargarAutores() {
+        autores = mutableListOf()
+        val db = bd.readableDatabase
+        val cursor = db.rawQuery("SELECT DISTINCT autor_libro FROM Libros ORDER BY autor_libro", null)
+        while (cursor.moveToNext()) {
+            val nombre = cursor.getString(0)
+            val cursorCount = db.rawQuery("SELECT COUNT(*) FROM Libros WHERE autor_libro = ?", arrayOf(nombre))
+            val count = if (cursorCount.moveToFirst()) cursorCount.getInt(0) else 0
+            cursorCount.close()
+            (autores as MutableList).add(Autor(nombre, count))
+        }
+        cursor.close()
+        db.close()
+
+        findViewById<TextView>(R.id.tvTotalAutores).text = autores.size.toString().padStart(2, '0')
+        findViewById<TextView>(R.id.tvTotalLibros).text = autores.sumOf { it.libros }.toString()
+        renderAutores(autores)
     }
 
     private fun renderAutores(items: List<Autor>) {

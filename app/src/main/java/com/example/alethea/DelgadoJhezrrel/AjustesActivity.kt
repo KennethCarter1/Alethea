@@ -6,14 +6,15 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.SeekBar
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.alethea.EdgarRosario.InicioActivity
 import com.example.alethea.MusicManager
 import com.example.alethea.R
+import com.example.alethea.SessionManager
 
 class AjustesActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,22 +31,32 @@ class AjustesActivity : AppCompatActivity() {
 
         val radioClaro = findViewById<View>(R.id.radioClaro)
         val radioOscuro = findViewById<View>(R.id.radioOscuro)
-        fun seleccionarModo(claro: Boolean) {
-            radioClaro.setBackgroundResource(if (claro) R.drawable.radio_activo else R.drawable.radio_inactivo)
-            radioOscuro.setBackgroundResource(if (claro) R.drawable.radio_inactivo else R.drawable.radio_activo)
-            Toast.makeText(this, if (claro) "Modo claro seleccionado" else "Modo oscuro seleccionado", Toast.LENGTH_SHORT).show()
+
+        fun actualizarRadios() {
+            val oscuro = SessionManager.esModoOscuro()
+            radioClaro.setBackgroundResource(if (oscuro) R.drawable.radio_inactivo else R.drawable.radio_activo)
+            radioOscuro.setBackgroundResource(if (oscuro) R.drawable.radio_activo else R.drawable.radio_inactivo)
         }
+
+        fun seleccionarModo(claro: Boolean) {
+            val oscuro = !claro
+            SessionManager.setModoOscuro(oscuro)
+            AppCompatDelegate.setDefaultNightMode(
+                if (oscuro) AppCompatDelegate.MODE_NIGHT_YES
+                else AppCompatDelegate.MODE_NIGHT_NO
+            )
+            actualizarRadios()
+        }
+
+        actualizarRadios()
 
         findViewById<ImageView>(R.id.btnVolver).setOnClickListener { finish() }
         findViewById<LinearLayout>(R.id.btnModoClaro).setOnClickListener { seleccionarModo(true) }
         findViewById<LinearLayout>(R.id.btnModoOscuro).setOnClickListener { seleccionarModo(false) }
         findViewById<LinearLayout>(R.id.btnCerrarSesion).setOnClickListener {
+            SessionManager.cerrarSesion()
             MusicManager.detener()
-            val intent =
-                Intent(
-                    this,
-                    InicioActivity::class.java
-                )
+            val intent = Intent(this, InicioActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
         }

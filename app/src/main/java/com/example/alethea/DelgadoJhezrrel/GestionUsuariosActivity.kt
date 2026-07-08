@@ -12,17 +12,12 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.alethea.AletheaBd
 import com.example.alethea.R
 
 class GestionUsuariosActivity : AppCompatActivity() {
-    private val usuarios = listOf(
-        Usuario("Kenneth Carter", "correo@utp.ac.pa", "8-888-888", "Usuario", true),
-        Usuario("Edgar Rosario", "edgar@utp.ac.pa", "8-777-777", "Admin", true),
-        Usuario("Rachel Mejia", "rachel@utp.ac.pa", "8-666-666", "Usuario", true),
-        Usuario("Jhezrrel Delgado", "jhezrrel@utp.ac.pa", "8-555-555", "Admin", true),
-        Usuario("Maria Lopez", "maria@utp.ac.pa", "8-444-444", "Usuario", false),
-        Usuario("Carlos Ruiz", "carlos@utp.ac.pa", "8-333-333", "Usuario", true)
-    )
+    private val bd by lazy { AletheaBd(this) }
+    private var usuarios = listOf<Usuario>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,10 +32,7 @@ class GestionUsuariosActivity : AppCompatActivity() {
         }
 
         findViewById<android.widget.ImageView>(R.id.btnVolver).setOnClickListener { finish() }
-        findViewById<TextView>(R.id.tvTotalUsuarios).text = usuarios.size.toString().padStart(2, '0')
-        findViewById<TextView>(R.id.tvTotalAceptados).text = usuarios.count { it.aceptado }.toString().padStart(2, '0')
-
-        renderUsuarios(usuarios)
+        cargarUsuarios()
         findViewById<EditText>(R.id.etBuscarUsuario).addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) = Unit
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
@@ -51,6 +43,44 @@ class GestionUsuariosActivity : AppCompatActivity() {
             }
             override fun afterTextChanged(s: Editable?) = Unit
         })
+    }
+
+    private fun cargarUsuarios() {
+        usuarios = mutableListOf()
+        val db = bd.readableDatabase
+        val cursor = db.rawQuery(
+            "SELECT id, nombre, apellido, correo, cedula, es_admin FROM Usuarios ORDER BY id", null
+        )
+        while (cursor.moveToNext()) {
+            val id = cursor.getInt(0)
+            val nombre = cursor.getString(1)
+            val apellido = cursor.getString(2)
+            val correo = cursor.getString(3)
+            val cedula = cursor.getString(4)
+            val esAdmin = cursor.getInt(5) == 1
+
+            val cursorPrestamos = db.rawQuery(
+                "SELECT COUNT(*) FROM Prestamos WHERE usuario_id = ?", arrayOf(id.toString())
+            )
+            val tienePrestamos = if (cursorPrestamos.moveToFirst()) cursorPrestamos.getInt(0) > 0 else false
+            cursorPrestamos.close()
+
+            (usuarios as MutableList).add(
+                Usuario(
+                    nombre = "$nombre $apellido",
+                    correo = correo,
+                    cedula = cedula,
+                    rol = if (esAdmin) "Admin" else "Usuario",
+                    aceptado = tienePrestamos
+                )
+            )
+        }
+        cursor.close()
+        db.close()
+
+        findViewById<TextView>(R.id.tvTotalUsuarios).text = usuarios.size.toString().padStart(2, '0')
+        findViewById<TextView>(R.id.tvTotalAceptados).text = usuarios.count { it.aceptado }.toString().padStart(2, '0')
+        renderUsuarios(usuarios)
     }
 
     private fun renderUsuarios(items: List<Usuario>) {
