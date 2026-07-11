@@ -44,6 +44,13 @@
                 android:textColorHint="@color/gris_medio"
                 android:textSize="14sp" />
         </LinearLayout>
+        <!-- Resultados -->
+        <LinearLayout
+            android:id="@+id/contenedorResultados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp" />
 
         <!-- Logo -->
         <ImageView
