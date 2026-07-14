@@ -13,6 +13,8 @@
     <string name="jhez_categoria">Categoria</string>
     <string name="jhez_anio_creado">Año creado</string>
     <string name="jhez_hint_anio">Ingrese el año</string>
+    <string name="jhez_stock">Stock</string>
+    <string name="jhez_hint_stock">Ingrese el stock</string>
     <string name="jhez_sinopsis">Sinopsis</string>
     <string name="jhez_hint_sinopsis">Escriba la sinopsis del libro</string>
     <string name="jhez_ingrese_imagen">Ingrese la imagen                                      [ ]</string>
@@ -43,7 +45,7 @@
     <string name="jhez_gestion_autores">Gestión de Autores</string>
     <string name="jhez_total_autores">Total de Autores</string>
     <string name="jhez_total_libros">Total de Libros</string>
-    <string name="jhez_hint_buscar_autor">Buscar un libro del catálogo</string>
+    <string name="jhez_hint_buscar_autor">Buscar un autor...</string>
 
     <!-- ===== GESTIÓN USUARIOS ===== -->
     <string name="jhez_gestion_usuarios">Gestión de Usuarios</string>

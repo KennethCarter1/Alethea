@@ -44,8 +44,8 @@ class InicioActivity : AppCompatActivity() {
                                 text = "📖 $nombre\n$autor · $categoria"
                                 textSize = 14f
                                 setPadding(24, 16, 24, 16)
-                                setTextColor(resources.getColor(R.color.negro_suave, null))
-                                setBackgroundResource(R.drawable.campo_borde)
+                                setTextColor(resources.getColor(R.color.edgar_texto_principal, null))
+                                setBackgroundResource(R.drawable.edgar_campo_borde)
                                 val params = android.widget.LinearLayout.LayoutParams(
                                     android.widget.LinearLayout.LayoutParams.MATCH_PARENT,
                                     android.widget.LinearLayout.LayoutParams.WRAP_CONTENT
@@ -60,7 +60,7 @@ class InicioActivity : AppCompatActivity() {
                             text = "No se encontraron libros"
                             textSize = 14f
                             setPadding(16, 12, 16, 12)
-                            setTextColor(resources.getColor(R.color.gris_medio, null))
+                            setTextColor(resources.getColor(R.color.edgar_texto_secundario, null))
                         }
                         contenedorResultados.addView(tv)
                     }

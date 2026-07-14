@@ -19,6 +19,7 @@ class CatalogoAdapter(
         val tvAutor: TextView = view.findViewById(R.id.tvAutorLibro)
         val tvCategoria: TextView = view.findViewById(R.id.tvCategoriaLibro)
         val tvAnio: TextView = view.findViewById(R.id.tvAnioLibro)
+        val tvStock: TextView = view.findViewById(R.id.tvStockCatalogo)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, position: Int): CatalogoViewHolder {
@@ -33,6 +34,11 @@ class CatalogoAdapter(
         holder.tvAutor.text = libro.autor
         holder.tvCategoria.text = libro.categoria
         holder.tvAnio.text = libro.anio
+        holder.tvStock.text = holder.itemView.context.getString(
+            R.string.ken_disponibles_formato,
+            libro.disponibles,
+            libro.stock
+        )
 
         holder.itemView.setOnClickListener { onClick?.invoke(libro) }
         holder.itemView.findViewById<View>(R.id.btnFav).setOnClickListener { onFavorito?.invoke(libro) }

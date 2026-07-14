@@ -7,7 +7,7 @@
     <!-- Gestion Libros -->
     <string name="gestion_libros_titulo">Gestión de Libros</string>
     <string name="gestion_libros_buscar_hint">Buscar libro por nombre…</string>
-    <string name="gestion_libros_total">Total</string>
+    <string name="gestion_libros_total">Ejemplares</string>
     <string name="gestion_libros_disponibles">Disponibles</string>
     <string name="gestion_libros_prestados">Prestados</string>
     <string name="gestion_libros_agregar">+ Agregar Libro</string>
@@ -15,7 +15,7 @@
 
     <!-- Prestamos y Devoluciones -->
     <string name="prestamos_titulo">Préstamos y Devoluciones</string>
-    <string name="prestamos_devoluciones_pendientes">Devoluciones Pendientes</string>
+    <string name="prestamos_historial">Historial de Préstamos</string>
     <string name="prestamos_pendientes">Préstamos Pendientes</string>
     <string name="tabla_usuario">Usuario</string>
     <string name="tabla_libro">Libro</string>
@@ -35,6 +35,8 @@
     <string name="editar_libro_categoria_hint">Seleccione categoría</string>
     <string name="editar_libro_anio">Año</string>
     <string name="editar_libro_anio_hint">2025</string>
+    <string name="editar_libro_stock">Stock</string>
+    <string name="editar_libro_stock_hint">Ingrese el stock</string>
     <string name="editar_libro_sinopsis">Sinopsis</string>
     <string name="editar_libro_sinopsis_hint">Describa la sinopsis del libro</string>
     <string name="editar_libro_imagen_hint">Seleccione imagen del libro</string>
@@ -42,12 +44,14 @@
     <!-- Reporte / Estadisticas -->
     <string name="reporte_titulo">Reporte y Estadísticas</string>
     <string name="reporte_usuarios">Usuarios</string>
-    <string name="reporte_libros">Libros</string>
+    <string name="reporte_libros">Ejemplares</string>
     <string name="reporte_autores">Autores</string>
     <string name="reporte_prestamos">Préstamos</string>
     <string name="reporte_estadisticas_generales">Estadísticas Generales</string>
-    <string name="reporte_libros_por_categoria">Libros por Categoría</string>
+    <string name="reporte_libros_por_categoria">Ejemplares por Categoría</string>
     <string name="reporte_categoria_ejemplo">Novela (ejemplo)</string>
+    <string name="reporte_pendientes">Pendientes</string>
+    <string name="reporte_aceptados">Aceptados</string>
     <string name="reporte_exportar_datos">Exportar datos</string>
     <string name="valor_cero">0</string>
     <string name="valor_cero_doble">0.0</string>
@@ -64,5 +68,12 @@
     <string name="item_libro_autor_placeholder">Antoine de Saint-Exupéry</string>
     <string name="item_libro_categoria_placeholder">Infantil</string>
     <string name="item_libro_anio_placeholder">1943</string>
+    <string name="item_libro_stock_placeholder">Stock: 0 · Disponibles: 0</string>
+    <string name="item_libro_stock_formato">Stock: %1$d · Disponibles: %2$d</string>
+    <string name="prestamos_stock_disponible">Disponibles: %1$d</string>
+    <string name="estado_sin_stock">Sin Stock</string>
+    <string name="tabla_fecha_entrega">Fecha de entrega</string>
+    <string name="accion_marcar_devuelto">Marcar como devuelto</string>
+    <string name="estado_devuelto">Devuelto</string>
     <string name="estado_pendiente">Pendiente</string>
 </resources>

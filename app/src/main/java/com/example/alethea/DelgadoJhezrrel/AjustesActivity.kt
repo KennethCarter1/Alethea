@@ -31,11 +31,15 @@ class AjustesActivity : AppCompatActivity() {
 
         val radioClaro = findViewById<View>(R.id.radioClaro)
         val radioOscuro = findViewById<View>(R.id.radioOscuro)
+        val opcionClaro = findViewById<LinearLayout>(R.id.btnModoClaro)
+        val opcionOscuro = findViewById<LinearLayout>(R.id.btnModoOscuro)
 
         fun actualizarRadios() {
             val oscuro = SessionManager.esModoOscuro()
-            radioClaro.setBackgroundResource(if (oscuro) R.drawable.radio_inactivo else R.drawable.radio_activo)
-            radioOscuro.setBackgroundResource(if (oscuro) R.drawable.radio_activo else R.drawable.radio_inactivo)
+            radioClaro.setBackgroundResource(if (oscuro) R.drawable.jhez_radio_inactivo else R.drawable.jhez_radio_activo)
+            radioOscuro.setBackgroundResource(if (oscuro) R.drawable.jhez_radio_activo else R.drawable.jhez_radio_inactivo)
+            opcionClaro.isSelected = !oscuro
+            opcionOscuro.isSelected = oscuro
         }
 
         fun seleccionarModo(claro: Boolean) {
@@ -51,8 +55,8 @@ class AjustesActivity : AppCompatActivity() {
         actualizarRadios()
 
         findViewById<ImageView>(R.id.btnVolver).setOnClickListener { finish() }
-        findViewById<LinearLayout>(R.id.btnModoClaro).setOnClickListener { seleccionarModo(true) }
-        findViewById<LinearLayout>(R.id.btnModoOscuro).setOnClickListener { seleccionarModo(false) }
+        opcionClaro.setOnClickListener { seleccionarModo(true) }
+        opcionOscuro.setOnClickListener { seleccionarModo(false) }
         findViewById<LinearLayout>(R.id.btnCerrarSesion).setOnClickListener {
             SessionManager.cerrarSesion()
             MusicManager.detener()

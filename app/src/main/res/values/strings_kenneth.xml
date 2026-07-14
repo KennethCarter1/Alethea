@@ -28,12 +28,20 @@
 
     <!-- ===== MIS PRÉSTAMOS ===== -->
     <string name="ken_mis_prestamos">Mis Préstamos</string>
+    <string name="ken_filtro_todos">Todos</string>
+    <string name="ken_atrasado">Atrasado</string>
     <string name="ken_fecha_devolucion">Fecha de devolución:</string>
     <string name="ken_fecha_prestamo">Fecha de préstamo:</string>
     <string name="ken_fecha_solicitud">Fecha de solicitud</string>
     <string name="ken_aceptada">Aceptada</string>
     <string name="ken_sin_stock">Sin Stock</string>
+    <string name="ken_disponibles_muestra">Disponibles: 0 de 0</string>
+    <string name="ken_disponibles_formato">Disponibles: %1$d de %2$d</string>
+    <string name="ken_devuelto">Devuelto</string>
+    <string name="ken_fecha_entrega">Fecha de entrega:</string>
     <string name="ken_rechazado">Rechazado</string>
+    <string name="ken_resultado">Resultado:</string>
+    <string name="ken_rechazo_admin">Rechazada por el administrador</string>
     <string name="ken_motivo">Motivo</string>
     <string name="ken_motivo_corto">Ejemplar dañado</string>
     <string name="ken_motivo_rechazo">Usuario suspendido</string>

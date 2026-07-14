@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.alethea.R
 
@@ -13,7 +14,8 @@ data class PrestamoPendiente(
     val libroNombre: String,
     val fechaSolicitada: String,
     val libroId: Int,
-    val usuarioId: Int
+    val usuarioId: Int,
+    val disponibles: Int
 )
 
 class PrestamoPendienteAdapter(
@@ -26,8 +28,9 @@ class PrestamoPendienteAdapter(
         val tvUsuario: TextView = view.findViewById(R.id.tvUsuario)
         val tvLibro: TextView = view.findViewById(R.id.tvLibro)
         val tvFechaSolicitada: TextView = view.findViewById(R.id.tvFechaSolicitada)
-        val btnAceptar: TextView = view.findViewById(R.id.btnAceptar)
-        val btnRechazar: TextView = view.findViewById(R.id.btnRechazar)
+        val tvStockPendiente: TextView = view.findViewById(R.id.tvStockPendiente)
+        val btnAceptar: View = view.findViewById(R.id.btnAceptar)
+        val btnRechazar: View = view.findViewById(R.id.btnRechazar)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -41,6 +44,23 @@ class PrestamoPendienteAdapter(
         holder.tvUsuario.text = p.usuarioNombre
         holder.tvLibro.text = p.libroNombre
         holder.tvFechaSolicitada.text = p.fechaSolicitada
+        if (p.disponibles == 0) {
+            holder.tvStockPendiente.text = holder.itemView.context.getString(R.string.estado_sin_stock)
+            holder.tvStockPendiente.setBackgroundResource(R.drawable.badge_sinstock)
+            holder.tvStockPendiente.setTextColor(
+                ContextCompat.getColor(holder.itemView.context, R.color.rachel_texto_estado_sinstock)
+            )
+            holder.tvStockPendiente.setPadding(10, 4, 10, 4)
+        } else {
+            holder.tvStockPendiente.text = holder.itemView.context.getString(
+                R.string.prestamos_stock_disponible,
+                p.disponibles
+            )
+            holder.tvStockPendiente.background = null
+            holder.tvStockPendiente.setTextColor(
+                ContextCompat.getColor(holder.itemView.context, R.color.rachel_texto_principal)
+            )
+        }
         holder.btnAceptar.setOnClickListener { onAceptar(p) }
         holder.btnRechazar.setOnClickListener { onRechazar(p) }
     }

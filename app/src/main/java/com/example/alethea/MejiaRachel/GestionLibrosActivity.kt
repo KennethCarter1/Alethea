@@ -61,7 +61,14 @@ class GestionLibrosActivity : AppCompatActivity() {
     private fun cargarLibros() {
         libros.clear()
         val db = bd.readableDatabase
-        val cursor = db.rawQuery("SELECT id, nombre_libro, autor_libro, categoria, ano_creado, sinopsis FROM Libros", null)
+        val cursor = db.rawQuery(
+            """SELECT l.id, l.nombre_libro, l.autor_libro, l.categoria,
+                l.ano_creado, l.sinopsis, COALESCE(l.ruta_imagen,''), l.stock,
+                MAX(l.stock - (SELECT COUNT(*) FROM Prestamos p
+                    WHERE p.libro_id = l.id AND p.estado = 'Aceptada'), 0)
+                FROM Libros l""".trimIndent(),
+            null
+        )
         while (cursor.moveToNext()) {
             libros.add(
                 Libro(
@@ -70,7 +77,10 @@ class GestionLibrosActivity : AppCompatActivity() {
                     autor = cursor.getString(2),
                     categoria = cursor.getString(3),
                     anio = cursor.getString(4),
-                    sinopsis = cursor.getString(5)
+                    sinopsis = cursor.getString(5),
+                    rutaImagen = cursor.getString(6),
+                    stock = cursor.getInt(7),
+                    disponibles = cursor.getInt(8)
                 )
             )
         }
@@ -132,7 +142,15 @@ class GestionLibrosActivity : AppCompatActivity() {
     }
 
     private fun actualizarKpis() {
-        findViewById<TextView>(R.id.tvTotalLibros).text = libros.size.toString()
-        findViewById<TextView>(R.id.tvDisponibles).text = libros.size.toString()
+        val totalEjemplares = libros.sumOf { it.stock }
+        findViewById<TextView>(R.id.tvTotalLibros).text = totalEjemplares.toString()
+        val db = bd.readableDatabase
+        val cursorP = db.rawQuery("SELECT COUNT(*) FROM Prestamos WHERE estado = 'Aceptada'", null)
+        val prestados = if (cursorP.moveToFirst()) cursorP.getInt(0) else 0
+        cursorP.close()
+        db.close()
+        val disponibles = (totalEjemplares - prestados).coerceAtLeast(0)
+        findViewById<TextView>(R.id.tvDisponibles).text = disponibles.toString()
+        findViewById<TextView>(R.id.tvPrestados).text = prestados.toString()
     }
 }

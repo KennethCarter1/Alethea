@@ -32,7 +32,9 @@ class PrestamosDevolucionesActivity : AppCompatActivity() {
     private fun cargarPendientes() {
         val db = bd.readableDatabase
         val cursor = db.rawQuery(
-            """SELECT p.id, u.usuario, l.nombre_libro, p.fecha_prestamo, l.id, p.usuario_id
+            """SELECT p.id, u.nombre || ' ' || u.apellido, l.nombre_libro, p.fecha_prestamo, l.id, p.usuario_id,
+                      MAX(l.stock - (SELECT COUNT(*) FROM Prestamos activos
+                          WHERE activos.libro_id = l.id AND activos.estado = 'Aceptada'), 0)
                FROM Prestamos p
                INNER JOIN Usuarios u ON p.usuario_id = u.id
                INNER JOIN Libros l ON p.libro_id = l.id
@@ -48,12 +50,16 @@ class PrestamosDevolucionesActivity : AppCompatActivity() {
                     libroNombre = cursor.getString(2),
                     fechaSolicitada = cursor.getString(3),
                     libroId = cursor.getInt(4),
-                    usuarioId = cursor.getInt(5)
+                    usuarioId = cursor.getInt(5),
+                    disponibles = cursor.getInt(6)
                 )
             )
         }
+        val totalPendientes = cursor.count
         cursor.close()
         db.close()
+
+        findViewById<android.widget.TextView>(R.id.tvKpiPendientes).text = totalPendientes.toString()
 
         val rv = findViewById<RecyclerView>(R.id.rvPrestamosPendientes)
         rv.layoutManager = LinearLayoutManager(this)
@@ -66,11 +72,12 @@ class PrestamosDevolucionesActivity : AppCompatActivity() {
     private fun cargarDevoluciones() {
         val db = bd.readableDatabase
         val cursor = db.rawQuery(
-            """SELECT p.id, u.usuario, l.nombre_libro, p.fecha_prestamo, p.fecha_devolucion, p.estado
+            """SELECT p.id, u.nombre || ' ' || u.apellido, l.nombre_libro, p.fecha_prestamo,
+                      p.fecha_devolucion, p.estado, p.fecha_entrega
                FROM Prestamos p
                INNER JOIN Usuarios u ON p.usuario_id = u.id
                INNER JOIN Libros l ON p.libro_id = l.id
-               WHERE p.estado IN ('Aceptada', 'Rechazado')
+               WHERE p.estado IN ('Aceptada', 'Rechazado', 'Devuelto')
                ORDER BY p.id DESC""", null
         )
         val lista = mutableListOf<Devolucion>()
@@ -82,16 +89,22 @@ class PrestamosDevolucionesActivity : AppCompatActivity() {
                     libroNombre = cursor.getString(2),
                     fechaPrestamo = cursor.getString(3),
                     fechaDevolucion = cursor.getString(4),
-                    estado = cursor.getString(5)
+                    estado = cursor.getString(5),
+                    fechaEntrega = cursor.getString(6)
                 )
             )
         }
+        val totalHistorial = cursor.count
         cursor.close()
         db.close()
 
+        findViewById<android.widget.TextView>(R.id.tvKpiHistorial).text = totalHistorial.toString()
+
         val rv = findViewById<RecyclerView>(R.id.rvDevoluciones)
         rv.layoutManager = LinearLayoutManager(this)
-        rv.adapter = DevolucionAdapter(lista.toList())
+        rv.adapter = DevolucionAdapter(lista.toList()) { devolucion ->
+            marcarDevuelto(devolucion)
+        }
     }
 
     private fun cambiarEstado(p: PrestamoPendiente, nuevoEstado: String) {
@@ -100,13 +113,74 @@ class PrestamosDevolucionesActivity : AppCompatActivity() {
             .setTitle("$accion préstamo")
             .setMessage("¿${accion.replaceFirstChar { it.uppercaseChar() }} el préstamo de \"${p.libroNombre}\" de ${p.usuarioNombre}?")
             .setPositiveButton("Sí") { _, _ ->
+                if (nuevoEstado == "Aceptada") {
+                    aceptarPrestamo(p)
+                } else {
+                    val db = bd.writableDatabase
+                    db.execSQL(
+                        "UPDATE Prestamos SET estado = ? WHERE id = ?",
+                        arrayOf(nuevoEstado, p.id.toString())
+                    )
+                    db.close()
+                    Toast.makeText(this, "Préstamo rechazado", Toast.LENGTH_SHORT).show()
+                    cargarDatos()
+                }
+            }
+            .setNegativeButton("No", null)
+            .show()
+    }
+
+    private fun aceptarPrestamo(prestamo: PrestamoPendiente) {
+        val db = bd.writableDatabase
+        var aceptado = false
+        db.beginTransaction()
+        try {
+            val cursor = db.rawQuery(
+                """SELECT MAX(l.stock - (SELECT COUNT(*) FROM Prestamos activos
+                    WHERE activos.libro_id = l.id AND activos.estado = 'Aceptada'), 0)
+                    FROM Libros l WHERE l.id = ?""".trimIndent(),
+                arrayOf(prestamo.libroId.toString())
+            )
+            val disponibles = if (cursor.moveToFirst()) cursor.getInt(0) else 0
+            cursor.close()
+
+            if (disponibles > 0) {
+                val sentencia = db.compileStatement(
+                    """UPDATE Prestamos
+                       SET estado = 'Aceptada', fecha_devolucion = date('now','localtime','+7 days'), fecha_entrega = NULL
+                       WHERE id = ? AND estado = 'Pendiente'""".trimIndent(),
+                )
+                sentencia.bindLong(1, prestamo.id.toLong())
+                aceptado = sentencia.executeUpdateDelete() > 0
+            }
+            db.setTransactionSuccessful()
+        } finally {
+            db.endTransaction()
+            db.close()
+        }
+
+        if (aceptado) {
+            Toast.makeText(this, "Préstamo aceptado", Toast.LENGTH_SHORT).show()
+        } else {
+            Toast.makeText(this, "No hay stock disponible", Toast.LENGTH_LONG).show()
+        }
+        cargarDatos()
+    }
+
+    private fun marcarDevuelto(devolucion: Devolucion) {
+        AlertDialog.Builder(this)
+            .setTitle("Registrar devolución")
+            .setMessage("¿Marcar \"${devolucion.libroNombre}\" como devuelto?")
+            .setPositiveButton("Sí") { _, _ ->
                 val db = bd.writableDatabase
                 db.execSQL(
-                    "UPDATE Prestamos SET estado = ? WHERE id = ?",
-                    arrayOf(nuevoEstado, p.id.toString())
+                    """UPDATE Prestamos
+                       SET estado = 'Devuelto', fecha_entrega = date('now','localtime')
+                       WHERE id = ? AND estado = 'Aceptada'""".trimIndent(),
+                    arrayOf(devolucion.prestamoId.toString())
                 )
                 db.close()
-                Toast.makeText(this, "Préstamo $nuevoEstado", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Devolución registrada", Toast.LENGTH_SHORT).show()
                 cargarDatos()
             }
             .setNegativeButton("No", null)

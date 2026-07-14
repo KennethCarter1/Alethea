@@ -1,404 +1,501 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_claro">
+    android:background="@drawable/fondo_kenneth">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/main"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".CarterKenneth.PerfilUsuarioActivity">
+        android:orientation="vertical"
+        android:paddingBottom="24dp">
 
-        <ImageView
-            android:id="@+id/btnAtras"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:src="@drawable/ic_flecha_atras"
-            android:contentDescription="@string/ken_regresar"
-            android:tint="#5c3f1c"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/tvTitulo"
-            android:layout_width="wrap_content"
+        <!-- Header -->
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:text="@string/ken_perfil"
-            android:textColor="#5c3f1c"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@id/btnAtras"
-            app:layout_constraintStart_toEndOf="@id/btnAtras"
-            app:layout_constraintTop_toTopOf="@id/btnAtras" />
+            android:layout_marginTop="8dp">
 
+            <ImageView
+                android:id="@+id/btnAtras"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/ic_flecha_atras"
+                android:contentDescription="@string/ken_regresar"
+                android:tint="@color/kenneth_icono" />
+
+            <TextView
+                android:id="@+id/tvTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_toEndOf="@id/btnAtras"
+                android:layout_centerVertical="true"
+                android:text="@string/ken_perfil"
+                android:textColor="@color/kenneth_texto_principal"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <!-- Avatar -->
         <LinearLayout
-            android:id="@+id/cardEstadisticas"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp">
+
+            <FrameLayout
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:background="@drawable/kenneth_circulo_icono">
+
+                <ImageView
+                    android:id="@+id/ivAvatar"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_perfil"
+                    android:tint="@color/kenneth_icono"
+                    android:contentDescription="" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tvNombrePerfil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/kenneth_texto_principal"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Stats -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="24dp"
-            android:background="@drawable/cuadro_borde"
-            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/kenneth_cuadro"
             android:gravity="center"
-            android:padding="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btnAtras">
+            android:orientation="horizontal"
+            android:padding="12dp">
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <FrameLayout
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:background="@drawable/circulo_estadistica">
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/kenneth_circulo_icono">
 
                     <ImageView
-                        android:layout_width="28dp"
-                        android:layout_height="28dp"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
                         android:layout_gravity="center"
                         android:src="@drawable/ic_libro"
+                        android:tint="@color/kenneth_icono"
                         android:contentDescription="@string/ken_desc_libros" />
                 </FrameLayout>
 
                 <TextView
+                    android:id="@+id/tvTotalPrestamos"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="0"
-                    android:textColor="#5c3f1c"
-                    android:textSize="20sp"
+                    android:layout_marginTop="6dp"
+                    android:text="00"
+                    android:textColor="@color/kenneth_texto_principal"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/ken_total_libros"
-                    android:textColor="#5c3f1c"
-                    android:textSize="12sp"
+                    android:textColor="@color/kenneth_texto_principal"
+                    android:textSize="11sp"
                     android:gravity="center" />
             </LinearLayout>
 
             <View
                 android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:layout_marginVertical="8dp"
-                android:background="#5c3f1c" />
+                android:layout_height="40dp"
+                android:background="@color/kenneth_linea" />
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <FrameLayout
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:background="@drawable/circulo_estadistica">
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/kenneth_circulo_icono">
 
                     <ImageView
-                        android:layout_width="28dp"
-                        android:layout_height="28dp"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
                         android:layout_gravity="center"
                         android:src="@drawable/ic_corazon"
+                        android:tint="@color/kenneth_icono"
                         android:contentDescription="@string/ken_desc_favoritos" />
                 </FrameLayout>
 
                 <TextView
+                    android:id="@+id/tvTotalFavoritos"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="0"
-                    android:textColor="#5c3f1c"
-                    android:textSize="20sp"
+                    android:layout_marginTop="6dp"
+                    android:text="00"
+                    android:textColor="@color/kenneth_texto_principal"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/ken_total_favoritos"
-                    android:textColor="#5c3f1c"
-                    android:textSize="12sp"
+                    android:textColor="@color/kenneth_texto_principal"
+                    android:textSize="11sp"
                     android:gravity="center" />
             </LinearLayout>
 
             <View
                 android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:layout_marginVertical="8dp"
-                android:background="#5c3f1c" />
+                android:layout_height="40dp"
+                android:background="@color/kenneth_linea" />
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <FrameLayout
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:background="@drawable/circulo_estadistica">
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/kenneth_circulo_icono">
 
                     <ImageView
-                        android:layout_width="28dp"
-                        android:layout_height="28dp"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
                         android:layout_gravity="center"
                         android:src="@drawable/ic_reloj_arena"
+                        android:tint="@color/kenneth_icono"
                         android:contentDescription="@string/ken_desc_espera" />
                 </FrameLayout>
 
                 <TextView
+                    android:id="@+id/tvTotalPendientes"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="0"
-                    android:textColor="#5c3f1c"
-                    android:textSize="20sp"
+                    android:layout_marginTop="6dp"
+                    android:text="00"
+                    android:textColor="@color/kenneth_texto_principal"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/ken_total_espera"
-                    android:textColor="#5c3f1c"
-                    android:textSize="12sp"
+                    android:textColor="@color/kenneth_texto_principal"
+                    android:textSize="11sp"
                     android:gravity="center" />
             </LinearLayout>
-
         </LinearLayout>
 
+        <!-- Personal Info -->
         <LinearLayout
             android:id="@+id/cardInfo"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="12dp"
-            android:background="@drawable/cuadro_borde"
+            android:background="@drawable/kenneth_cuadro"
             android:orientation="vertical"
-            android:padding="12dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cardEstadisticas">
+            android:padding="12dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
+                android:drawableStart="@drawable/ic_perfil"
+                android:drawableTint="@color/kenneth_icono_dorado"
+                android:drawablePadding="6dp"
                 android:text="@string/ken_informacion_personal"
-                android:textColor="#5c3f1c"
+                android:textColor="@color/kenneth_texto_principal"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/ken_nombre"
-                android:textColor="#5c3f1c"
-                android:textSize="12sp" />
-
             <EditText
+                android:id="@+id/etNombre"
                 android:layout_width="match_parent"
-                android:layout_height="34dp"
-                android:layout_marginBottom="6dp"
-                android:background="@drawable/campo_borde"
+                android:layout_height="36dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/kenneth_campo"
+                android:drawableStart="@drawable/ic_perfil"
+                android:drawableTint="@color/kenneth_icono"
+                android:drawablePadding="6dp"
+                android:hint="Nombre"
                 android:paddingHorizontal="8dp"
-                android:textColor="#5c3f1c"
-                android:textSize="13sp"
+                android:textColor="@color/kenneth_texto_principal"
+                android:textColorHint="@color/kenneth_texto_secundario"
+                android:textSize="12sp"
                 android:inputType="text" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/ken_apellido"
-                android:textColor="#5c3f1c"
-                android:textSize="12sp" />
-
             <EditText
+                android:id="@+id/etApellido"
                 android:layout_width="match_parent"
-                android:layout_height="34dp"
-                android:layout_marginBottom="6dp"
-                android:background="@drawable/campo_borde"
+                android:layout_height="36dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/kenneth_campo"
+                android:drawableStart="@drawable/ic_perfil"
+                android:drawableTint="@color/kenneth_icono"
+                android:drawablePadding="6dp"
+                android:hint="Apellido"
                 android:paddingHorizontal="8dp"
-                android:textColor="#5c3f1c"
-                android:textSize="13sp"
+                android:textColor="@color/kenneth_texto_principal"
+                android:textColorHint="@color/kenneth_texto_secundario"
+                android:textSize="12sp"
                 android:inputType="text" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/ken_correo"
-                android:textColor="#5c3f1c"
-                android:textSize="12sp" />
-
             <EditText
+                android:id="@+id/etCorreo"
                 android:layout_width="match_parent"
-                android:layout_height="34dp"
-                android:layout_marginBottom="6dp"
-                android:background="@drawable/campo_borde"
+                android:layout_height="36dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/kenneth_campo"
+                android:drawableStart="@drawable/ic_correo"
+                android:drawableTint="@color/kenneth_icono"
+                android:drawablePadding="6dp"
+                android:hint="Correo electrónico"
                 android:paddingHorizontal="8dp"
-                android:textColor="#5c3f1c"
-                android:textSize="13sp"
+                android:textColor="@color/kenneth_texto_principal"
+                android:textColorHint="@color/kenneth_texto_secundario"
+                android:textSize="12sp"
                 android:inputType="textEmailAddress" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/ken_cedula"
-                android:textColor="#5c3f1c"
-                android:textSize="12sp" />
-
             <EditText
+                android:id="@+id/etCedula"
                 android:layout_width="match_parent"
-                android:layout_height="34dp"
-                android:layout_marginBottom="6dp"
-                android:background="@drawable/campo_borde"
+                android:layout_height="36dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/kenneth_campo"
+                android:drawableStart="@drawable/ic_cedula"
+                android:drawableTint="@color/kenneth_icono"
+                android:drawablePadding="6dp"
+                android:hint="Cédula"
                 android:paddingHorizontal="8dp"
-                android:textColor="#5c3f1c"
-                android:textSize="13sp"
-                android:inputType="number" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/ken_nacionalidad"
-                android:textColor="#5c3f1c"
-                android:textSize="12sp" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="34dp"
-                android:background="@drawable/campo_borde"
-                android:paddingHorizontal="8dp"
-                android:textColor="#5c3f1c"
-                android:textSize="13sp"
+                android:textColor="@color/kenneth_texto_principal"
+                android:textColorHint="@color/kenneth_texto_secundario"
+                android:textSize="12sp"
                 android:inputType="text" />
 
-            <LinearLayout
+            <Spinner
+                android:id="@+id/spNacionalidad"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginTop="12dp"
-                android:background="@drawable/boton_guardar"
-                android:gravity="center"
+                android:layout_height="36dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/kenneth_campo"
+                android:paddingHorizontal="8dp" />
+
+            <LinearLayout
+                android:id="@+id/btnGuardarCambios"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/kenneth_boton_principal"
                 android:clickable="true"
-                android:focusable="true">
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_lapiz"
+                    android:tint="@color/kenneth_texto_boton"
+                    android:contentDescription="" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
                     android:text="@string/ken_guardar_cambios"
-                    android:textColor="#f6eacc"
-                    android:textSize="14sp"
+                    android:textColor="@color/kenneth_texto_boton"
+                    android:textSize="13sp"
                     android:textStyle="bold" />
             </LinearLayout>
-
         </LinearLayout>
 
+        <!-- Password Card -->
         <LinearLayout
             android:id="@+id/cardPassword"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="12dp"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/cuadro_borde"
+            android:background="@drawable/kenneth_cuadro"
             android:orientation="vertical"
-            android:padding="12dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cardInfo">
+            android:padding="12dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
+                android:drawableStart="@drawable/ic_candado"
+                android:drawableTint="@color/kenneth_icono"
+                android:drawablePadding="6dp"
                 android:text="@string/ken_cambiar_contrasena"
-                android:textColor="#5c3f1c"
+                android:textColor="@color/kenneth_texto_principal"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/ken_contrasena_actual"
-                android:textColor="#5c3f1c"
-                android:textSize="12sp" />
-
-            <EditText
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="34dp"
-                android:layout_marginBottom="6dp"
-                android:background="@drawable/campo_borde"
-                android:paddingHorizontal="8dp"
-                android:textColor="#5c3f1c"
-                android:textSize="13sp"
-                android:inputType="textPassword" />
+                android:layout_height="36dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/kenneth_campo"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="8dp"
+                android:paddingEnd="4dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/ken_nueva_contrasena"
-                android:textColor="#5c3f1c"
-                android:textSize="12sp" />
+                <EditText
+                    android:id="@+id/etContrasenaActual"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:drawableStart="@drawable/ic_candado"
+                    android:drawableTint="@color/kenneth_icono"
+                    android:drawablePadding="6dp"
+                    android:hint="Contraseña actual"
+                    android:inputType="textPassword"
+                    android:paddingHorizontal="4dp"
+                    android:textColor="@color/kenneth_texto_principal"
+                    android:textColorHint="@color/kenneth_texto_secundario"
+                    android:textSize="12sp" />
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="34dp"
-                android:layout_marginBottom="6dp"
-                android:background="@drawable/campo_borde"
-                android:paddingHorizontal="8dp"
-                android:textColor="#5c3f1c"
-                android:textSize="13sp"
-                android:inputType="textPassword" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/ken_confirmar_contrasena"
-                android:textColor="#5c3f1c"
-                android:textSize="12sp" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="34dp"
-                android:background="@drawable/campo_borde"
-                android:paddingHorizontal="8dp"
-                android:textColor="#5c3f1c"
-                android:textSize="13sp"
-                android:inputType="textPassword" />
+                <ImageView
+                    android:id="@+id/ivOjoActual"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_visibilidad"
+                    android:tint="@color/kenneth_icono_ojo"
+                    android:contentDescription="Mostrar contraseña"
+                    android:clickable="true"
+                    android:focusable="true" />
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginTop="12dp"
-                android:background="@drawable/boton_guardar"
-                android:gravity="center"
+                android:layout_height="36dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/kenneth_campo"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="8dp"
+                android:paddingEnd="4dp">
+
+                <EditText
+                    android:id="@+id/etNuevaContrasena"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:drawableStart="@drawable/ic_candado"
+                    android:drawableTint="@color/kenneth_icono"
+                    android:drawablePadding="6dp"
+                    android:hint="Nueva contraseña"
+                    android:inputType="textPassword"
+                    android:paddingHorizontal="4dp"
+                    android:textColor="@color/kenneth_texto_principal"
+                    android:textColorHint="@color/kenneth_texto_secundario"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/ivOjoNueva"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_visibilidad"
+                    android:tint="@color/kenneth_icono_ojo"
+                    android:contentDescription="Mostrar contraseña"
+                    android:clickable="true"
+                    android:focusable="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/kenneth_campo"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="8dp"
+                android:paddingEnd="4dp">
+
+                <EditText
+                    android:id="@+id/etConfirmarContrasena"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:drawableStart="@drawable/ic_candado"
+                    android:drawableTint="@color/kenneth_icono"
+                    android:drawablePadding="6dp"
+                    android:hint="Confirmar contraseña"
+                    android:inputType="textPassword"
+                    android:paddingHorizontal="4dp"
+                    android:textColor="@color/kenneth_texto_principal"
+                    android:textColorHint="@color/kenneth_texto_secundario"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/ivOjoConfirmar"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_visibilidad"
+                    android:tint="@color/kenneth_icono_ojo"
+                    android:contentDescription="Mostrar contraseña"
+                    android:clickable="true"
+                    android:focusable="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnActualizarContrasena"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/kenneth_boton_principal"
                 android:clickable="true"
-                android:focusable="true">
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_lapiz"
+                    android:tint="@color/kenneth_texto_boton"
+                    android:contentDescription="" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
                     android:text="@string/ken_actualizar_contrasena"
-                    android:textColor="#f6eacc"
-                    android:textSize="14sp"
+                    android:textColor="@color/kenneth_texto_boton"
+                    android:textSize="13sp"
                     android:textStyle="bold" />
             </LinearLayout>
-
         </LinearLayout>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
+    </LinearLayout>
 </ScrollView>

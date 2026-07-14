@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ==================== EDGAR ROSARIO ==================== -->
+    <color name="edgar_texto_principal">#F5F1E8</color>
+    <color name="edgar_texto_secundario">#B7BCC6</color>
+    <color name="edgar_superficie">#242A36</color>
+    <color name="edgar_borde">#5A6270</color>
+    <color name="edgar_fondo_icono">#34303A</color>
+    <color name="edgar_icono_campo">#D4AF37</color>
+    <color name="edgar_texto_boton">#F5F1E8</color>
+    <color name="edgar_borde_boton">#FFD54F</color>
+
+    <!-- ==================== KENNETH CARTER ==================== -->
+    <color name="kenneth_texto_principal">#F5F1E8</color>
+    <color name="kenneth_texto_item">#F5F1E8</color>
+    <color name="kenneth_texto_secundario">#B7BCC6</color>
+    <color name="kenneth_texto_vacio">#B7BCC6</color>
+    <color name="kenneth_superficie">#242A36</color>
+    <color name="kenneth_superficie_campo">#242A36</color>
+    <color name="kenneth_borde">#D4AF37</color>
+    <color name="kenneth_borde_campo">#5A6270</color>
+    <color name="kenneth_fondo_icono">#34303A</color>
+    <color name="kenneth_icono">#D4AF37</color>
+    <color name="kenneth_icono_dorado">#D4AF37</color>
+    <color name="kenneth_icono_ojo">#D4AF37</color>
+    <color name="kenneth_linea">#665A3C</color>
+    <color name="kenneth_boton_fondo">#000000</color>
+    <color name="kenneth_borde_boton">#FFD54F</color>
+    <color name="kenneth_texto_boton">#F5F1E8</color>
+    <color name="kenneth_favorito">#EF5350</color>
+    <color name="kenneth_estado_aceptado">#43A047</color>
+    <color name="kenneth_estado_pendiente">#FB8C00</color>
+    <color name="kenneth_estado_rechazado">#E53935</color>
+    <color name="kenneth_estado_atrasado">#C62828</color>
+    <color name="kenneth_borde_estado_aceptado">#FFD54F</color>
+    <color name="kenneth_borde_estado_pendiente">#FFD54F</color>
+    <color name="kenneth_borde_estado_rechazado">#FFD54F</color>
+    <color name="kenneth_borde_estado_atrasado">#FFD54F</color>
+    <color name="kenneth_texto_estado">#FFFFFF</color>
+    <color name="kenneth_sin_stock_fondo">#C62828</color>
+    <color name="kenneth_sin_stock_texto">#FFFFFF</color>
+
+    <!-- ==================== RACHEL MEJÍA ==================== -->
+    <color name="rachel_texto_encabezado">#F5F1E8</color>
+    <color name="rachel_texto_principal">#F5F1E8</color>
+    <color name="rachel_texto_formulario">#F5F1E8</color>
+    <color name="rachel_texto_secundario">#B7BCC6</color>
+    <color name="rachel_superficie">#242A36</color>
+    <color name="rachel_superficie_campo">#242A36</color>
+    <color name="rachel_borde">#D4AF37</color>
+    <color name="rachel_borde_campo">#5A6270</color>
+    <color name="rachel_fondo_icono">#34303A</color>
+    <color name="rachel_icono_marron">#D4AF37</color>
+    <color name="rachel_icono_dorado">#D4AF37</color>
+    <color name="rachel_linea">#5A6270</color>
+    <color name="rachel_fondo_portada">#34303A</color>
+    <color name="rachel_boton_fondo">#000000</color>
+    <color name="rachel_borde_boton">#FFD54F</color>
+    <color name="rachel_texto_boton">#F5F1E8</color>
+    <color name="rachel_boton_secundario_fondo">#000000</color>
+    <color name="rachel_borde_boton_secundario">#FFD54F</color>
+    <color name="rachel_pendiente">#F59E0B</color>
+    <color name="rachel_aceptado">#22C55E</color>
+    <color name="rachel_texto_estado_atrasado">#FFFFFF</color>
+    <color name="rachel_texto_estado_claro">#FFFFFF</color>
+    <color name="rachel_texto_estado_sinstock">#FFFFFF</color>
+
+    <!-- ==================== JHEZRREL DELGADO ==================== -->
+    <color name="jhez_texto_principal">#F5F1E8</color>
+    <color name="jhez_texto_secundario">#B7BCC6</color>
+    <color name="jhez_superficie">#242A36</color>
+    <color name="jhez_superficie_campo">#242A36</color>
+    <color name="jhez_borde">#D4AF37</color>
+    <color name="jhez_borde_campo">#5A6270</color>
+    <color name="jhez_fondo_icono">#34303A</color>
+    <color name="jhez_icono">#D4AF37</color>
+    <color name="jhez_linea">#665A3C</color>
+    <color name="jhez_boton_fondo">#000000</color>
+    <color name="jhez_borde_boton">#FFD54F</color>
+    <color name="jhez_texto_boton">#F5F1E8</color>
+    <color name="jhez_opcion_seleccionada">#3B3421</color>
+    <color name="jhez_borde_opcion_seleccionada">#FFD54F</color>
+
+</resources>

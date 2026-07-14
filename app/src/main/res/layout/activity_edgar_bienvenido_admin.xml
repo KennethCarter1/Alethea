@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="0dp"
-    android:background="@drawable/bg_claro">
+    android:background="@drawable/fondo_edgar">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,10 +17,10 @@
 
         <!-- Logo -->
         <ImageView
-            android:layout_width="300dp"
-            android:layout_height="300dp"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
             android:contentDescription="@string/logo_desc"
-            android:src="@drawable/logo_claro" />
+            android:src="@drawable/logo_edgar" />
 
 
         <!-- Bienvenido -->
@@ -28,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/bienvenida_titulo"
-            android:textColor="@color/negro_suave"
+            android:textColor="@color/edgar_texto_principal"
             android:textSize="26sp"
             android:textStyle="bold"
             android:fontFamily="serif"
@@ -39,7 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/bienvenida_slogan"
-            android:textColor="@color/negro_suave"
+            android:textColor="@color/edgar_texto_principal"
             android:textSize="15sp"
             android:fontFamily="sans-serif"
             android:layout_marginTop="4dp"
@@ -61,7 +61,7 @@
                 android:layout_marginEnd="6dp"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="3dp"
-                app:cardBackgroundColor="@color/blanco">
+                app:cardBackgroundColor="@color/edgar_superficie">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -73,7 +73,7 @@
                     <FrameLayout
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:background="@drawable/circulo_crema"
+                        android:background="@drawable/edgar_circulo_icono"
                         android:padding="10dp">
 
                         <ImageView
@@ -93,7 +93,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/admin_gestion_libros"
-                            android:textColor="@color/negro_suave"
+                            android:textColor="@color/edgar_texto_principal"
                             android:textSize="13sp"
                             android:textStyle="bold"
                             android:fontFamily="sans-serif" />
@@ -102,7 +102,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/admin_gestion_libros_desc"
-                            android:textColor="@color/gris_medio"
+                            android:textColor="@color/edgar_texto_secundario"
                             android:textSize="11sp"
                             android:fontFamily="sans-serif"
                             android:layout_marginTop="2dp" />
@@ -118,7 +118,7 @@
                 android:layout_marginStart="6dp"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="3dp"
-                app:cardBackgroundColor="@color/blanco">
+                app:cardBackgroundColor="@color/edgar_superficie">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -130,7 +130,7 @@
                     <FrameLayout
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:background="@drawable/circulo_crema"
+                        android:background="@drawable/edgar_circulo_icono"
                         android:padding="10dp">
 
                         <ImageView
@@ -150,7 +150,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/admin_prestamos"
-                            android:textColor="@color/negro_suave"
+                            android:textColor="@color/edgar_texto_principal"
                             android:textSize="13sp"
                             android:textStyle="bold"
                             android:fontFamily="sans-serif" />
@@ -159,7 +159,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/admin_prestamos_desc"
-                            android:textColor="@color/gris_medio"
+                            android:textColor="@color/edgar_texto_secundario"
                             android:textSize="11sp"
                             android:fontFamily="sans-serif"
                             android:layout_marginTop="2dp" />
@@ -184,7 +184,7 @@
                 android:layout_marginEnd="6dp"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="3dp"
-                app:cardBackgroundColor="@color/blanco">
+                app:cardBackgroundColor="@color/edgar_superficie">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -196,7 +196,7 @@
                     <FrameLayout
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:background="@drawable/circulo_crema"
+                        android:background="@drawable/edgar_circulo_icono"
                         android:padding="10dp">
 
                         <ImageView
@@ -216,7 +216,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/admin_gestion_autores"
-                            android:textColor="@color/negro_suave"
+                            android:textColor="@color/edgar_texto_principal"
                             android:textSize="13sp"
                             android:textStyle="bold"
                             android:fontFamily="sans-serif" />
@@ -225,7 +225,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/admin_gestion_autores_desc"
-                            android:textColor="@color/gris_medio"
+                            android:textColor="@color/edgar_texto_secundario"
                             android:textSize="11sp"
                             android:fontFamily="sans-serif"
                             android:layout_marginTop="2dp" />
@@ -241,7 +241,7 @@
                 android:layout_marginStart="6dp"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="3dp"
-                app:cardBackgroundColor="@color/blanco">
+                app:cardBackgroundColor="@color/edgar_superficie">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -255,7 +255,7 @@
                     <FrameLayout
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:background="@drawable/circulo_crema"
+                        android:background="@drawable/edgar_circulo_icono"
                         android:padding="10dp">
 
                         <ImageView
@@ -276,7 +276,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="sans-serif"
                             android:text="@string/admin_reportes"
-                            android:textColor="@color/negro_suave"
+                            android:textColor="@color/edgar_texto_principal"
                             android:textSize="13sp"
                             android:textStyle="bold" />
 
@@ -286,7 +286,7 @@
                             android:layout_marginTop="5dp"
                             android:fontFamily="sans-serif"
                             android:text="@string/admin_reportes_desc"
-                            android:textColor="@color/gris_medio"
+                            android:textColor="@color/edgar_texto_secundario"
                             android:textSize="11sp" />
                     </LinearLayout>
                 </LinearLayout>
@@ -309,7 +309,7 @@
                 android:layout_marginEnd="6dp"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="3dp"
-                app:cardBackgroundColor="@color/blanco">
+                app:cardBackgroundColor="@color/edgar_superficie">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -321,7 +321,7 @@
                     <FrameLayout
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:background="@drawable/circulo_crema"
+                        android:background="@drawable/edgar_circulo_icono"
                         android:padding="10dp">
 
                         <ImageView
@@ -341,7 +341,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/admin_gestion_usuarios"
-                            android:textColor="@color/negro_suave"
+                            android:textColor="@color/edgar_texto_principal"
                             android:textSize="13sp"
                             android:textStyle="bold"
                             android:fontFamily="sans-serif" />
@@ -350,7 +350,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/admin_gestion_usuarios_desc"
-                            android:textColor="@color/gris_medio"
+                            android:textColor="@color/edgar_texto_secundario"
                             android:textSize="11sp"
                             android:fontFamily="sans-serif"
                             android:layout_marginTop="2dp" />
@@ -366,7 +366,7 @@
                 android:layout_marginStart="6dp"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="3dp"
-                app:cardBackgroundColor="@color/blanco">
+                app:cardBackgroundColor="@color/edgar_superficie">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -379,7 +379,7 @@
                     <FrameLayout
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:background="@drawable/circulo_crema"
+                        android:background="@drawable/edgar_circulo_icono"
                         android:padding="10dp">
 
                         <ImageView
@@ -399,7 +399,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/menu_ajustes"
-                            android:textColor="@color/negro_suave"
+                            android:textColor="@color/edgar_texto_principal"
                             android:textSize="13sp"
                             android:textStyle="bold"
                             android:fontFamily="sans-serif" />
@@ -408,7 +408,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/admin_ajustes_desc"
-                            android:textColor="@color/gris_medio"
+                            android:textColor="@color/edgar_texto_secundario"
                             android:textSize="11sp"
                             android:fontFamily="sans-serif"
                             android:layout_marginTop="2dp" />

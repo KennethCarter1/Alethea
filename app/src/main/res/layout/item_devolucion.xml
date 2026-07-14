@@ -3,65 +3,233 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="10dp"
-    android:gravity="center_vertical"
-    android:orientation="horizontal">
+    android:background="@drawable/rachel_cuadro"
+    android:orientation="vertical"
+    android:padding="12dp">
 
-    <TextView
-        android:id="@+id/tvUsuario"
-        android:layout_width="0dp"
+    <!-- Usuario -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="2"
-        android:text="@string/item_usuario_placeholder"
-        android:textColor="@color/negro_suave"
-        android:textSize="13sp"
-        android:textStyle="bold" />
+        android:layout_marginBottom="6dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
 
-    <TextView
-        android:id="@+id/tvLibro"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="2"
-        android:text="@string/item_libro_placeholder"
-        android:textColor="@color/negro_suave"
-        android:textSize="13sp"
-        android:textStyle="bold" />
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_perfil"
+            android:contentDescription="@string/tabla_usuario"
+            android:tint="@color/rachel_texto_principal" />
 
-    <TextView
-        android:id="@+id/tvFechaPrestamo"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="3"
-        android:gravity="center"
-        android:text="@string/item_fecha_placeholder"
-        android:textColor="@color/negro_suave"
-        android:textSize="13sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/tabla_usuario"
+            android:textColor="@color/rachel_texto_principal"
+            android:textSize="11sp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/tvFechaLimite"
-        android:layout_width="0dp"
+        <TextView
+            android:id="@+id/tvUsuario"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:text="@string/item_usuario_placeholder"
+            android:textColor="@color/rachel_texto_principal"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- Libro -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="3"
-        android:gravity="center"
-        android:text="@string/item_fecha_placeholder"
-        android:textColor="@color/negro_suave"
-        android:textSize="13sp" />
+        android:layout_marginBottom="6dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_libro"
+            android:contentDescription="@string/tabla_libro"
+            android:tint="@color/rachel_texto_principal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/tabla_libro"
+            android:textColor="@color/rachel_texto_principal"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvLibro"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:text="@string/item_libro_placeholder"
+            android:textColor="@color/rachel_texto_principal"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- Fecha Préstamo -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_calendario"
+            android:contentDescription="@string/tabla_fecha_prestamo"
+            android:tint="@color/rachel_texto_principal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/tabla_fecha_prestamo"
+            android:textColor="@color/rachel_texto_principal"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvFechaPrestamo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:text="@string/item_fecha_placeholder"
+            android:textColor="@color/rachel_texto_principal"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- Fecha Límite -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_reloj_arena"
+            android:contentDescription="@string/tabla_fecha_limite"
+            android:tint="@color/rachel_texto_principal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/tabla_fecha_limite"
+            android:textColor="@color/rachel_texto_principal"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvFechaLimite"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:text="@string/item_fecha_placeholder"
+            android:textColor="@color/rachel_texto_principal"
+            android:textSize="12sp" />
+    </LinearLayout>
 
     <LinearLayout
-        android:layout_width="0dp"
+        android:id="@+id/filaFechaEntrega"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="2"
-        android:gravity="center">
+        android:layout_marginBottom="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:contentDescription="@string/tabla_fecha_entrega"
+            android:src="@drawable/ic_calendario"
+            android:tint="@color/rachel_texto_principal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/tabla_fecha_entrega"
+            android:textColor="@color/rachel_texto_principal"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvFechaEntrega"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_weight="1"
+            android:text="@string/item_fecha_placeholder"
+            android:textColor="@color/rachel_texto_principal"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- Estado -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_marcador"
+            android:contentDescription="@string/tabla_estado"
+            android:tint="@color/rachel_texto_principal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/tabla_estado"
+            android:textColor="@color/rachel_texto_principal"
+            android:textSize="11sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tvEstado"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/bg_badge_outline"
-            android:paddingHorizontal="10dp"
-            android:paddingVertical="4dp"
+            android:layout_marginStart="8dp"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="5dp"
             android:text="@string/estado_pendiente"
-            android:textColor="@color/negro_suave"
+            android:textColor="@color/rachel_texto_estado_claro"
             android:textSize="11sp"
             android:textStyle="bold" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/btnMarcarDevuelto"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rachel_boton_principal"
+        android:gravity="center"
+        android:text="@string/accion_marcar_devuelto"
+        android:textColor="@color/rachel_texto_boton"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
 </LinearLayout>

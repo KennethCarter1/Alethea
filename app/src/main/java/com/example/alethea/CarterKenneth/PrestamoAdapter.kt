@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.alethea.R
 
@@ -43,20 +44,33 @@ class PrestamoAdapter(
         holder.tvAutor.text = p.autor
 
         when (p.estado) {
-            "Aceptada" -> {
-                holder.tvEstado.text = "Aceptada"
+            "Aceptada", "Devuelto" -> {
+                holder.tvEstado.text = p.estado
                 holder.tvEstado.setBackgroundResource(R.drawable.badge_aceptada)
-                holder.tvEstado.setTextColor(android.graphics.Color.WHITE)
+                holder.tvEstado.setTextColor(
+                    ContextCompat.getColor(holder.itemView.context, R.color.kenneth_texto_estado)
+                )
             }
             "Rechazado" -> {
                 holder.tvEstado.text = "Rechazado"
                 holder.tvEstado.setBackgroundResource(R.drawable.badge_rechazado)
-                holder.tvEstado.setTextColor(android.graphics.Color.WHITE)
+                holder.tvEstado.setTextColor(
+                    ContextCompat.getColor(holder.itemView.context, R.color.kenneth_texto_estado)
+                )
+            }
+            "Atrasado" -> {
+                holder.tvEstado.text = "Atrasado"
+                holder.tvEstado.setBackgroundResource(R.drawable.badge_atrasado)
+                holder.tvEstado.setTextColor(
+                    ContextCompat.getColor(holder.itemView.context, R.color.kenneth_texto_estado)
+                )
             }
             else -> {
                 holder.tvEstado.text = "Pendiente"
-                holder.tvEstado.setBackgroundResource(R.drawable.badge_sinstock)
-                holder.tvEstado.setTextColor(android.graphics.Color.WHITE)
+                holder.tvEstado.setBackgroundResource(R.drawable.badge_pendiente)
+                holder.tvEstado.setTextColor(
+                    ContextCompat.getColor(holder.itemView.context, R.color.kenneth_texto_estado)
+                )
             }
         }
 

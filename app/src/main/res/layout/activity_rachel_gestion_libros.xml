@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo_claro"
+    android:background="@drawable/fondo_rachel"
     tools:context=".MejiaRachel.GestionLibrosActivity">
 
     <LinearLayout
@@ -23,7 +23,8 @@
             android:layout_height="28dp"
             android:layout_marginBottom="8dp"
             android:contentDescription="@string/accion_atras"
-            android:src="@drawable/ic_flecha_atras" />
+            android:src="@drawable/ic_flecha_atras"
+            android:tint="@color/rachel_texto_formulario" />
 
         <!-- Logo -->
         <ImageView
@@ -31,7 +32,7 @@
             android:layout_height="180dp"
             android:layout_gravity="center_horizontal"
             android:contentDescription="@string/logo_desc"
-            android:src="@drawable/logo_claro" />
+            android:src="@drawable/logo_rachel" />
 
         <!-- Titulo -->
         <TextView
@@ -42,7 +43,7 @@
             android:layout_marginBottom="20dp"
             android:fontFamily="sans-serif"
             android:text="@string/gestion_libros_titulo"
-            android:textColor="#5C3A21"
+            android:textColor="@color/rachel_texto_principal"
             android:textSize="22sp"
             android:textStyle="bold" />
 
@@ -51,7 +52,7 @@
             android:layout_width="match_parent"
             android:layout_height="52dp"
             android:layout_marginBottom="16dp"
-            android:background="@drawable/campo_borde"
+            android:background="@drawable/rachel_campo"
             android:gravity="center_vertical"
             android:orientation="horizontal"
             android:paddingHorizontal="12dp">
@@ -60,7 +61,8 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:contentDescription="@string/inicio_buscar"
-                android:src="@drawable/ic_buscar" />
+                android:src="@drawable/ic_buscar"
+                android:tint="@color/rachel_icono_marron" />
 
             <EditText
                 android:id="@+id/etBuscarLibro"
@@ -72,8 +74,8 @@
                 android:inputType="text"
                 android:maxLines="1"
                 android:paddingStart="10dp"
-                android:textColor="@color/negro_suave"
-                android:textColorHint="@color/gris_medio"
+                android:textColor="@color/rachel_texto_formulario"
+                android:textColorHint="@color/rachel_texto_secundario"
                 android:textSize="14sp" />
         </LinearLayout>
 
@@ -82,7 +84,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:background="@drawable/bg_card"
+            android:background="@drawable/rachel_tarjeta"
             android:orientation="horizontal"
             android:padding="14dp">
 
@@ -96,22 +98,24 @@
                 <FrameLayout
                     android:layout_width="44dp"
                     android:layout_height="44dp"
-                    android:background="@drawable/bg_circulo_icono">
+                    android:background="@drawable/rachel_circulo_icono">
 
                     <ImageView
                         android:layout_width="22dp"
                         android:layout_height="22dp"
                         android:layout_gravity="center"
                         android:contentDescription="@string/gestion_libros_total"
-                        android:src="@drawable/ic_libro" />
+                        android:src="@drawable/ic_libro"
+                        android:tint="@color/rachel_icono_marron" />
                 </FrameLayout>
 
                 <TextView
+                    android:id="@+id/tvTotalLibros"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
                     android:text="@string/valor_cero"
-                    android:textColor="@color/negro_suave"
+                    android:textColor="@color/rachel_texto_formulario"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -120,14 +124,14 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="@string/gestion_libros_total"
-                    android:textColor="@color/gris_medio"
+                    android:textColor="@color/rachel_texto_secundario"
                     android:textSize="11sp" />
             </LinearLayout>
 
             <View
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
-                android:background="@color/gris_suave" />
+                android:background="@color/rachel_linea" />
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -139,22 +143,24 @@
                 <FrameLayout
                     android:layout_width="44dp"
                     android:layout_height="44dp"
-                    android:background="@drawable/bg_circulo_icono">
+                    android:background="@drawable/rachel_circulo_icono">
 
                     <ImageView
                         android:layout_width="22dp"
                         android:layout_height="22dp"
                         android:layout_gravity="center"
                         android:contentDescription="@string/gestion_libros_disponibles"
-                        android:src="@drawable/ic_libros_pila" />
+                        android:src="@drawable/ic_libros_pila"
+                        android:tint="@color/rachel_icono_marron" />
                 </FrameLayout>
 
                 <TextView
+                    android:id="@+id/tvDisponibles"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
                     android:text="@string/valor_cero"
-                    android:textColor="@color/negro_suave"
+                    android:textColor="@color/rachel_texto_formulario"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -163,14 +169,14 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="@string/gestion_libros_disponibles"
-                    android:textColor="@color/gris_medio"
+                    android:textColor="@color/rachel_texto_secundario"
                     android:textSize="11sp" />
             </LinearLayout>
 
             <View
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
-                android:background="@color/gris_suave" />
+                android:background="@color/rachel_linea" />
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -182,22 +188,24 @@
                 <FrameLayout
                     android:layout_width="44dp"
                     android:layout_height="44dp"
-                    android:background="@drawable/bg_circulo_icono">
+                    android:background="@drawable/rachel_circulo_icono">
 
                     <ImageView
                         android:layout_width="22dp"
                         android:layout_height="22dp"
                         android:layout_gravity="center"
                         android:contentDescription="@string/gestion_libros_prestados"
-                        android:src="@drawable/ic_marcador" />
+                        android:src="@drawable/ic_marcador"
+                        android:tint="@color/rachel_icono_marron" />
                 </FrameLayout>
 
                 <TextView
+                    android:id="@+id/tvPrestados"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
                     android:text="@string/valor_cero"
-                    android:textColor="@color/negro_suave"
+                    android:textColor="@color/rachel_texto_formulario"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -206,7 +214,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="@string/gestion_libros_prestados"
-                    android:textColor="@color/gris_medio"
+                    android:textColor="@color/rachel_texto_secundario"
                     android:textSize="11sp" />
             </LinearLayout>
         </LinearLayout>
@@ -217,7 +225,7 @@
             android:layout_width="match_parent"
             android:layout_height="52dp"
             android:layout_marginBottom="20dp"
-            android:background="@drawable/boton_marron_rachel"
+            android:background="@drawable/rachel_boton_principal"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -226,7 +234,7 @@
                 android:layout_height="20dp"
                 android:contentDescription="@string/gestion_libros_agregar"
                 android:src="@drawable/ic_libro"
-                app:tint="@color/crema_suave" />
+                app:tint="@color/rachel_texto_boton" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -234,7 +242,7 @@
                 android:layout_marginStart="8dp"
                 android:letterSpacing="0.05"
                 android:text="@string/gestion_libros_agregar"
-                android:textColor="@color/crema_suave"
+                android:textColor="@color/rachel_texto_boton"
                 android:textSize="15sp"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -245,7 +253,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             android:text="@string/gestion_libros_listado"
-            android:textColor="#5C3A21"
+            android:textColor="@color/rachel_texto_principal"
             android:textSize="18sp"
             android:textStyle="bold" />
 

@@ -36,8 +36,9 @@
     <string name="login_contrasena">Contraseña</string>
     <string name="login_boton">Iniciar Sesión</string>
     <string name="login_registrarse">Registrarse</string>
+    <string name="login_mostrar_contrasena">Mostrar contraseña</string>
     <string name="inicio_buscar">Buscar un libro del catálogo</string>
     <string name="registrarse_boton">Registrarse</string>
-    <string name="login_titulo_registrarse">Registrarse</string>"
+    <string name="login_titulo_registrarse">Registrarse</string>
 
 </resources>

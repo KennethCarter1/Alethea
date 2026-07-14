@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <resources>
     <drawable name="bg_claro">@drawable/fondo_claro</drawable>
     <drawable name="bg_oscuro">@drawable/fondo_oscuro</drawable>
+
+    <!-- EDGAR ROSARIO -->
+    <drawable name="fondo_edgar">@drawable/fondo_claro</drawable>
+    <drawable name="logo_edgar">@drawable/logo_claro</drawable>
+
+    <!-- JHEZRREL DELGADO -->
+    <drawable name="fondo_jhezrrel">@drawable/fondo_claro</drawable>
+    <drawable name="logo_jhezrrel">@drawable/logo_claro</drawable>
+
+    <!-- RACHEL MEJÍA -->
+    <drawable name="fondo_rachel">@drawable/fondo_claro</drawable>
+    <drawable name="logo_rachel">@drawable/logo_claro</drawable>
+
+    <!-- KENNETH CARTER -->
+    <drawable name="fondo_kenneth">@drawable/fondo_claro</drawable>
+    <drawable name="logo_kenneth">@drawable/logo_claro</drawable>
 </resources>

@@ -1,94 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_claro">
+    android:background="@drawable/fondo_edgar"
+    android:orientation="vertical"
+    android:paddingHorizontal="20dp"
+    android:paddingTop="24dp"
+    android:paddingBottom="24dp">
 
+    <!-- Barra de búsqueda -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="70sp"
-        android:gravity="center_horizontal"
-        android:orientation="vertical"
-        android:paddingHorizontal="20dp"
-        android:paddingTop="24dp"
-        android:paddingBottom="160dp">
+        android:layout_height="48dp"
+        android:background="@drawable/edgar_campo_borde"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="14dp">
 
-        <!-- Barra de búsqueda -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="52dp"
-            android:layout_marginBottom="24dp"
-            android:background="@drawable/campo_borde"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:paddingHorizontal="12dp">
-
-            <ImageView
-                android:layout_width="22dp"
-                android:layout_height="22dp"
-                android:contentDescription="@string/inicio_buscar"
-                android:src="@drawable/ic_buscar" />
-
-            <EditText
-                android:id="@+id/etBuscar"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@android:color/transparent"
-                android:fontFamily="sans-serif"
-                android:hint="@string/inicio_buscar"
-                android:inputType="text"
-                android:maxLines="1"
-                android:paddingStart="10dp"
-                android:textColor="@color/negro_suave"
-                android:textColorHint="@color/gris_medio"
-                android:textSize="14sp" />
-        </LinearLayout>
-        <!-- Resultados -->
-        <LinearLayout
-            android:id="@+id/contenedorResultados"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginBottom="16dp" />
-
-        <!-- Logo -->
         <ImageView
-            android:layout_width="400dp"
-            android:layout_height="400dp"
-            android:layout_marginTop="30dp"
-            android:contentDescription="@string/logo_desc"
-            android:src="@drawable/logo_claro" />
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:contentDescription="@string/inicio_buscar"
+            android:src="@drawable/ic_buscar"
+            android:tint="@color/edgar_icono_campo" />
 
-
-        <!-- Botón Iniciar Sesión -->
-        <LinearLayout
-            android:id="@+id/btnIniciarSesion"
+        <EditText
+            android:id="@+id/etBuscar"
             android:layout_width="match_parent"
-            android:layout_height="52dp"
-            android:layout_marginTop="70sp"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/boton_oscuro"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:contentDescription="@string/login_boton"
-                android:src="@drawable/ic_perfil" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:fontFamily="sans-serif"
-                android:text="@string/login_boton"
-                android:textColor="@color/crema_suave"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:fontFamily="sans-serif"
+            android:hint="@string/inicio_buscar"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingStart="10dp"
+            android:textColor="@color/edgar_texto_principal"
+            android:textColorHint="@color/edgar_texto_secundario"
+            android:textSize="14sp" />
     </LinearLayout>
-</ScrollView>
+
+    <!-- Resultados -->
+    <LinearLayout
+        android:id="@+id/contenedorResultados"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical" />
+
+    <!-- Espacio arriba del logo -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Logo exactamente en el medio -->
+    <ImageView
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="@string/logo_desc"
+        android:src="@drawable/logo_edgar" />
+
+    <!-- Espacio abajo del logo -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Botón Iniciar Sesión con borde amarillo -->
+    <LinearLayout
+        android:id="@+id/btnIniciarSesion"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/boton_borde_amarillo"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:contentDescription="@string/login_boton"
+            android:src="@drawable/ic_perfil" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/login_boton"
+            android:textColor="@color/edgar_texto_boton"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

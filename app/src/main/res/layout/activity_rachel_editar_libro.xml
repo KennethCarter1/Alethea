@@ -4,7 +4,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo_claro"
+    android:background="@drawable/fondo_rachel"
     tools:context=".MejiaRachel.EditarLibroActivity">
 
     <LinearLayout
@@ -29,7 +29,7 @@
                 android:layout_gravity="center_vertical"
                 android:src="@drawable/ic_flecha_atras"
                 android:contentDescription="@string/rachel_regresar"
-                android:tint="#5c3f1c" />
+                android:tint="@color/rachel_texto_encabezado" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -37,7 +37,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="8dp"
                 android:text="@string/editar_libro_titulo"
-                android:textColor="#5c3f1c"
+                android:textColor="@color/rachel_texto_encabezado"
                 android:textSize="22sp"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -47,7 +47,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:background="@drawable/bg_card"
+            android:background="@drawable/rachel_tarjeta"
             android:orientation="vertical"
             android:padding="16dp">
 
@@ -57,7 +57,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="6dp"
                 android:text="@string/editar_libro_nombre"
-                android:textColor="@color/negro_suave"
+                android:textColor="@color/rachel_texto_formulario"
                 android:textSize="13sp" />
 
             <EditText
@@ -65,12 +65,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginBottom="16dp"
-                android:background="@drawable/campo_borde"
+                android:background="@drawable/rachel_campo"
                 android:fontFamily="sans-serif"
                 android:hint="@string/editar_libro_nombre_hint"
                 android:paddingHorizontal="12dp"
-                android:textColor="@color/negro_suave"
-                android:textColorHint="@color/gris_medio"
+                android:textColor="@color/rachel_texto_formulario"
+                android:textColorHint="@color/rachel_texto_secundario"
                 android:textSize="14sp" />
 
             <!-- Autor del libro -->
@@ -79,7 +79,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="6dp"
                 android:text="@string/editar_libro_autor"
-                android:textColor="@color/negro_suave"
+                android:textColor="@color/rachel_texto_formulario"
                 android:textSize="13sp" />
 
             <EditText
@@ -87,12 +87,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginBottom="16dp"
-                android:background="@drawable/campo_borde"
+                android:background="@drawable/rachel_campo"
                 android:fontFamily="sans-serif"
                 android:hint="@string/editar_libro_autor_hint"
                 android:paddingHorizontal="12dp"
-                android:textColor="@color/negro_suave"
-                android:textColorHint="@color/gris_medio"
+                android:textColor="@color/rachel_texto_formulario"
+                android:textColorHint="@color/rachel_texto_secundario"
                 android:textSize="14sp" />
 
             <!-- Categoria + Año (en fila) -->
@@ -114,13 +114,13 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="6dp"
                         android:text="@string/editar_libro_categoria"
-                        android:textColor="@color/negro_suave"
+                        android:textColor="@color/rachel_texto_formulario"
                         android:textSize="13sp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="48dp"
-                        android:background="@drawable/campo_borde"
+                        android:background="@drawable/rachel_campo"
                         android:gravity="center_vertical"
                         android:orientation="horizontal"
                         android:paddingHorizontal="12dp">
@@ -131,14 +131,15 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/editar_libro_categoria_hint"
-                            android:textColor="@color/gris_medio"
+                            android:textColor="@color/rachel_texto_secundario"
                             android:textSize="13sp" />
 
                         <ImageView
                             android:layout_width="18dp"
                             android:layout_height="18dp"
                             android:contentDescription="@string/editar_libro_categoria"
-                            android:src="@drawable/ic_chevron_down" />
+                            android:src="@drawable/ic_chevron_down"
+                            android:tint="@color/rachel_icono_marron" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -153,13 +154,13 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="6dp"
                         android:text="@string/editar_libro_anio"
-                        android:textColor="@color/negro_suave"
+                        android:textColor="@color/rachel_texto_formulario"
                         android:textSize="13sp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="48dp"
-                        android:background="@drawable/campo_borde"
+                        android:background="@drawable/rachel_campo"
                         android:gravity="center_vertical"
                         android:orientation="horizontal"
                         android:paddingHorizontal="12dp">
@@ -173,18 +174,41 @@
                             android:hint="@string/editar_libro_anio_hint"
                             android:inputType="number"
                             android:maxLines="1"
-                            android:textColor="@color/negro_suave"
-                            android:textColorHint="@color/gris_medio"
+                            android:textColor="@color/rachel_texto_formulario"
+                            android:textColorHint="@color/rachel_texto_secundario"
                             android:textSize="13sp" />
 
                         <ImageView
                             android:layout_width="18dp"
                             android:layout_height="18dp"
                             android:contentDescription="@string/editar_libro_anio"
-                            android:src="@drawable/ic_calendario" />
+                            android:src="@drawable/ic_calendario"
+                            android:tint="@color/rachel_icono_marron" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:text="@string/editar_libro_stock"
+                android:textColor="@color/rachel_texto_formulario"
+                android:textSize="13sp" />
+
+            <EditText
+                android:id="@+id/etStock"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/rachel_campo"
+                android:hint="@string/editar_libro_stock_hint"
+                android:inputType="number"
+                android:maxLines="1"
+                android:paddingHorizontal="12dp"
+                android:textColor="@color/rachel_texto_formulario"
+                android:textColorHint="@color/rachel_texto_secundario"
+                android:textSize="14sp" />
 
             <!-- Sinopsis -->
             <TextView
@@ -192,21 +216,21 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="6dp"
                 android:text="@string/editar_libro_sinopsis"
-                android:textColor="@color/negro_suave"
+                android:textColor="@color/rachel_texto_formulario"
                 android:textSize="13sp" />
 
             <EditText
                 android:id="@+id/etSinopsis"
                 android:layout_width="match_parent"
                 android:layout_height="140dp"
-                android:background="@drawable/campo_borde"
+                android:background="@drawable/rachel_campo"
                 android:fontFamily="sans-serif"
                 android:gravity="top"
                 android:hint="@string/editar_libro_sinopsis_hint"
                 android:inputType="textMultiLine"
                 android:padding="12dp"
-                android:textColor="@color/negro_suave"
-                android:textColorHint="@color/gris_medio"
+                android:textColor="@color/rachel_texto_formulario"
+                android:textColorHint="@color/rachel_texto_secundario"
                 android:textSize="14sp" />
         </LinearLayout>
 
@@ -215,7 +239,7 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginBottom="20dp"
-            android:background="@drawable/campo_borde"
+            android:background="@drawable/rachel_campo"
             android:gravity="center_vertical"
             android:orientation="horizontal"
             android:paddingHorizontal="12dp">
@@ -226,15 +250,25 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/editar_libro_imagen_hint"
-                android:textColor="@color/gris_medio"
+                android:textColor="@color/rachel_texto_secundario"
                 android:textSize="14sp" />
 
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:contentDescription="@string/editar_libro_imagen_hint"
-                android:src="@drawable/ic_imagen" />
+                android:src="@drawable/ic_imagen"
+                android:tint="@color/rachel_icono_marron" />
         </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivPreviewImagen"
+            android:layout_width="120dp"
+            android:layout_height="160dp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
 
         <!-- Botones -->
         <LinearLayout
@@ -248,14 +282,14 @@
                 android:layout_height="match_parent"
                 android:layout_marginEnd="8dp"
                 android:layout_weight="1"
-                android:background="@drawable/boton_outline"
+                android:background="@drawable/rachel_boton_secundario"
                 android:gravity="center">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/accion_cancelar"
-                    android:textColor="#5C3A21"
+                    android:textColor="@color/rachel_texto_principal"
                     android:textSize="15sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -265,14 +299,14 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/boton_marron_rachel"
+                android:background="@drawable/rachel_boton_principal"
                 android:gravity="center">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/editar_libro_titulo"
-                    android:textColor="@color/crema_suave"
+                    android:textColor="@color/rachel_texto_boton"
                     android:textSize="15sp"
                     android:textStyle="bold" />
             </LinearLayout>

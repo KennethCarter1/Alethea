@@ -1,425 +1,171 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_claro">
+    android:background="@drawable/fondo_kenneth"
+    android:orientation="vertical">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/main"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".CarterKenneth.CatalogoLibrosActivity">
+        android:layout_marginTop="8dp">
 
         <ImageView
             android:id="@+id/btnAtras"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
             android:src="@drawable/ic_flecha_atras"
             android:contentDescription="@string/ken_regresar"
-            android:tint="#5c3f1c"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:tint="@color/kenneth_icono" />
 
         <TextView
             android:id="@+id/tvTitulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:layout_toEndOf="@id/btnAtras"
+            android:layout_centerVertical="true"
             android:text="@string/ken_catalogo_titulo"
-            android:textColor="#5c3f1c"
+            android:textColor="@color/kenneth_texto_principal"
             android:textSize="22sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@id/btnAtras"
-            app:layout_constraintStart_toEndOf="@id/btnAtras"
-            app:layout_constraintTop_toTopOf="@id/btnAtras" />
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/kenneth_campo"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="10dp">
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/ic_buscar"
+            android:tint="@color/kenneth_icono"
+            android:contentDescription="" />
+
+        <EditText
+            android:id="@+id/etBuscarCat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:hint="@string/ken_buscar_libro"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingStart="8dp"
+            android:textColor="@color/kenneth_texto_principal"
+            android:textColorHint="@color/kenneth_texto_principal"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:weightSum="3">
 
         <LinearLayout
-            android:id="@+id/searchBar"
             android:layout_width="0dp"
-            android:layout_height="44dp"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/campo_borde"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:paddingHorizontal="12dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btnAtras">
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="4dp"
+            android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/ic_buscar"
-                android:contentDescription=""
-                android:tint="#5c3f1c" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Género"
+                android:textColor="@color/kenneth_texto_principal"
+                android:textSize="11sp"
+                android:textStyle="bold" />
 
-            <EditText
+            <Spinner
+                android:id="@+id/spinnerGeneroCat"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@android:color/transparent"
-                android:hint="@string/ken_buscar_libro"
-                android:textColorHint="#5c3f1c"
-                android:textColor="#5c3f1c"
-                android:textSize="14sp"
-                android:paddingStart="10dp"
-                android:inputType="text"
-                android:maxLines="1" />
+                android:layout_height="32dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/kenneth_campo"
+                android:paddingHorizontal="6dp" />
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/catCard1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/cuadro_borde"
-            android:orientation="horizontal"
-            android:padding="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/searchBar">
+            android:layout_weight="1"
+            android:layout_marginHorizontal="4dp"
+            android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="90dp"
-                android:layout_height="120dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/logo_claro"
-                android:contentDescription="" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Autor"
+                android:textColor="@color/kenneth_texto_principal"
+                android:textSize="11sp"
+                android:textStyle="bold" />
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_marginStart="10dp"
-                android:orientation="vertical">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:id="@+id/tvTituloLibro1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
-                        android:layout_centerVertical="true"
-                        android:text="@string/ken_cat_titulo1"
-                        android:textColor="#5c3f1c"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
-                    <FrameLayout
-                        android:id="@+id/btnFav1"
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
-                        android:layout_alignParentEnd="true"
-                        android:background="@drawable/circulo_estadistica">
-
-                        <ImageView
-                            android:layout_width="18dp"
-                            android:layout_height="18dp"
-                            android:layout_gravity="center"
-                            android:src="@drawable/ic_corazon"
-                            android:tint="#5c3f1c"
-                            android:contentDescription="" />
-                    </FrameLayout>
-                </RelativeLayout>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/ken_cat_autor1"
-                    android:textColor="#5c3f1c"
-                    android:textSize="13sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="@string/ken_cat_categoria1"
-                    android:textColor="#5c3f1c"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="@string/ken_cat_anio1"
-                    android:textColor="#5c3f1c"
-                    android:textSize="12sp" />
-
-            </LinearLayout>
-
+            <Spinner
+                android:id="@+id/spinnerAutorCat"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/kenneth_campo"
+                android:paddingHorizontal="6dp" />
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/catCard2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="6dp"
-            android:background="@drawable/cuadro_borde"
-            android:orientation="horizontal"
-            android:padding="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/catCard1">
+            android:layout_weight="1"
+            android:layout_marginStart="4dp"
+            android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="90dp"
-                android:layout_height="120dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/logo_claro"
-                android:contentDescription="" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Año"
+                android:textColor="@color/kenneth_texto_principal"
+                android:textSize="11sp"
+                android:textStyle="bold" />
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_marginStart="10dp"
-                android:orientation="vertical">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:id="@+id/tvTituloLibro2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
-                        android:layout_centerVertical="true"
-                        android:text="@string/ken_cat_titulo2"
-                        android:textColor="#5c3f1c"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
-                    <FrameLayout
-                        android:id="@+id/btnFav2"
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
-                        android:layout_alignParentEnd="true"
-                        android:background="@drawable/circulo_estadistica">
-
-                        <ImageView
-                            android:layout_width="18dp"
-                            android:layout_height="18dp"
-                            android:layout_gravity="center"
-                            android:src="@drawable/ic_corazon"
-                            android:tint="#5c3f1c"
-                            android:contentDescription="" />
-                    </FrameLayout>
-                </RelativeLayout>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/ken_cat_autor2"
-                    android:textColor="#5c3f1c"
-                    android:textSize="13sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="@string/ken_cat_categoria2"
-                    android:textColor="#5c3f1c"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="@string/ken_cat_anio2"
-                    android:textColor="#5c3f1c"
-                    android:textSize="12sp" />
-
-            </LinearLayout>
-
+            <Spinner
+                android:id="@+id/spinnerAnioCat"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/kenneth_campo"
+                android:paddingHorizontal="6dp" />
         </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvCountCat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/kenneth_texto_secundario"
+        android:textSize="11sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="16dp">
 
         <LinearLayout
-            android:id="@+id/catCard3"
-            android:layout_width="0dp"
+            android:id="@+id/listaCatalogo"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="6dp"
-            android:background="@drawable/cuadro_borde"
-            android:orientation="horizontal"
-            android:padding="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/catCard2">
-
-            <ImageView
-                android:layout_width="90dp"
-                android:layout_height="120dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/logo_claro"
-                android:contentDescription="" />
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_marginStart="10dp"
-                android:orientation="vertical">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:id="@+id/tvTituloLibro3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
-                        android:layout_centerVertical="true"
-                        android:text="@string/ken_cat_titulo3"
-                        android:textColor="#5c3f1c"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
-                    <FrameLayout
-                        android:id="@+id/btnFav3"
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
-                        android:layout_alignParentEnd="true"
-                        android:background="@drawable/circulo_estadistica">
-
-                        <ImageView
-                            android:layout_width="18dp"
-                            android:layout_height="18dp"
-                            android:layout_gravity="center"
-                            android:src="@drawable/ic_corazon"
-                            android:tint="#5c3f1c"
-                            android:contentDescription="" />
-                    </FrameLayout>
-                </RelativeLayout>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/ken_cat_autor3"
-                    android:textColor="#5c3f1c"
-                    android:textSize="13sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="@string/ken_cat_categoria3"
-                    android:textColor="#5c3f1c"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="@string/ken_cat_anio3"
-                    android:textColor="#5c3f1c"
-                    android:textSize="12sp" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/catCard4"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="6dp"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/cuadro_borde"
-            android:orientation="horizontal"
-            android:padding="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/catCard3">
-
-            <ImageView
-                android:layout_width="90dp"
-                android:layout_height="120dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/logo_claro"
-                android:contentDescription="" />
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_marginStart="10dp"
-                android:orientation="vertical">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:id="@+id/tvTituloLibro4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
-                        android:layout_centerVertical="true"
-                        android:text="@string/ken_cat_titulo4"
-                        android:textColor="#5c3f1c"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
-                    <FrameLayout
-                        android:id="@+id/btnFav4"
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
-                        android:layout_alignParentEnd="true"
-                        android:background="@drawable/circulo_estadistica">
-
-                        <ImageView
-                            android:layout_width="18dp"
-                            android:layout_height="18dp"
-                            android:layout_gravity="center"
-                            android:src="@drawable/ic_corazon"
-                            android:tint="#5c3f1c"
-                            android:contentDescription="" />
-                    </FrameLayout>
-                </RelativeLayout>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/ken_cat_autor4"
-                    android:textColor="#5c3f1c"
-                    android:textSize="13sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="@string/ken_cat_categoria4"
-                    android:textColor="#5c3f1c"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="@string/ken_cat_anio4"
-                    android:textColor="#5c3f1c"
-                    android:textSize="12sp" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-</ScrollView>
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp" />
+    </ScrollView>
+</LinearLayout>

@@ -2,13 +2,16 @@ package com.example.alethea.EdgarRosario
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.InputType
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.alethea.AletheaBd
 import com.example.alethea.R
+import com.example.alethea.SessionManager
 
 class IniciarSesionActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,14 +33,18 @@ class IniciarSesionActivity : AppCompatActivity() {
 
             val db = AletheaBd(this).readableDatabase
             val cursor = db.rawQuery(
-                "SELECT es_admin FROM Usuarios WHERE usuario = ? AND contrasena = ?",
+                "SELECT id, nombre, es_admin FROM Usuarios WHERE usuario = ? AND contrasena = ?",
                 arrayOf(usuario, contrasena)
             )
 
             if (cursor.moveToFirst()) {
-                val esAdmin = cursor.getInt(0)
+                val usuarioId = cursor.getInt(0)
+                val nombre = cursor.getString(1)
+                val esAdmin = cursor.getInt(2)
                 cursor.close()
                 db.close()
+
+                SessionManager.guardarSesion(usuarioId, nombre, esAdmin == 1)
 
                 if (esAdmin == 1) {
                     startActivity(Intent(this, BienvenidoAdminActivity::class.java))
@@ -54,6 +61,21 @@ class IniciarSesionActivity : AppCompatActivity() {
 
         findViewById<TextView>(R.id.btnRegistrarse).setOnClickListener {
             startActivity(Intent(this, RegistrarseActivity::class.java))
+        }
+
+        togglePasswordVisibility(etContrasena, findViewById(R.id.ivOjoContrasena))
+    }
+
+    private fun togglePasswordVisibility(et: EditText, iv: ImageView) {
+        iv.setOnClickListener {
+            if (et.inputType == InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD) {
+                et.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+                iv.setImageResource(R.drawable.ic_visibilidad)
+            } else {
+                et.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+                iv.setImageResource(R.drawable.ic_visibilidad_off)
+            }
+            et.text?.let { et.setSelection(it.length) }
         }
     }
 }

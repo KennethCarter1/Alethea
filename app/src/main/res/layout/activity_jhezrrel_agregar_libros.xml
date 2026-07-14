@@ -3,7 +3,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_claro"
+    android:background="@drawable/fondo_jhezrrel"
     android:fillViewport="true">
 
     <LinearLayout
@@ -27,14 +27,14 @@
                 android:layout_height="40dp"
                 android:src="@drawable/ic_flecha_atras"
                 android:contentDescription="@string/jhez_regresar"
-                android:tint="#5c3f1c" />
+                android:tint="@color/jhez_icono" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:text="@string/jhez_agregar_libro"
-                android:textColor="#5c3f1c"
+                android:textColor="@color/jhez_texto_principal"
                 android:textSize="22sp"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -44,13 +44,13 @@
             android:layout_height="150dp"
             android:contentDescription="@string/logo_desc"
             android:scaleType="fitCenter"
-            android:src="@drawable/logo_claro" />
+            android:src="@drawable/logo_jhezrrel" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="34dp"
-            android:background="@drawable/cuadro_borde"
+            android:background="@drawable/jhez_cuadro_borde"
             android:orientation="vertical"
             android:padding="10dp">
 
@@ -58,7 +58,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/jhez_nombre_libro"
-                android:textColor="#5c3f1c"
+                android:textColor="@color/jhez_texto_principal"
                 android:textSize="14sp" />
 
             <TextView
@@ -66,7 +66,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="@string/jhez_autor_libro"
-                android:textColor="#5c3f1c"
+                android:textColor="@color/jhez_texto_principal"
                 android:textSize="14sp" />
 
             <EditText
@@ -74,12 +74,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginTop="6dp"
-                android:background="@drawable/campo_borde"
+                android:background="@drawable/jhez_campo_borde"
                 android:hint="@string/jhez_hint_autor"
                 android:inputType="textCapWords"
                 android:paddingHorizontal="10dp"
-                android:textColor="#5c3f1c"
-                android:textColorHint="#5c3f1c"
+                android:textColor="@color/jhez_texto_principal"
+                android:textColorHint="@color/jhez_texto_principal"
                 android:textSize="14sp" />
 
             <LinearLayout
@@ -100,7 +100,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/jhez_categoria"
-                        android:textColor="#5c3f1c"
+                        android:textColor="@color/jhez_texto_principal"
                         android:textSize="14sp" />
 
                     <Spinner
@@ -108,7 +108,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="48dp"
                         android:layout_marginTop="6dp"
-                        android:background="@drawable/campo_borde" />
+                        android:background="@drawable/jhez_campo_borde" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -122,7 +122,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/jhez_anio_creado"
-                        android:textColor="#5c3f1c"
+                        android:textColor="@color/jhez_texto_principal"
                         android:textSize="14sp" />
 
                     <EditText
@@ -130,13 +130,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="48dp"
                         android:layout_marginTop="6dp"
-                        android:background="@drawable/campo_borde"
+                        android:background="@drawable/jhez_campo_borde"
                         android:hint="@string/jhez_hint_anio"
                         android:inputType="number"
                         android:maxLength="4"
                         android:paddingHorizontal="10dp"
-                        android:textColor="#5c3f1c"
-                        android:textColorHint="#5c3f1c"
+                        android:textColor="@color/jhez_texto_principal"
+                        android:textColorHint="@color/jhez_texto_principal"
                         android:textSize="14sp" />
                 </LinearLayout>
             </LinearLayout>
@@ -146,12 +146,33 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginTop="6dp"
-                android:background="@drawable/campo_borde"
+                android:background="@drawable/jhez_campo_borde"
                 android:hint="@string/jhez_hint_nombre"
                 android:inputType="textCapWords"
                 android:paddingHorizontal="10dp"
-                android:textColor="#5c3f1c"
-                android:textColorHint="#5c3f1c"
+                android:textColor="@color/jhez_texto_principal"
+                android:textColorHint="@color/jhez_texto_principal"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/jhez_stock"
+                android:textColor="@color/jhez_texto_principal"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/etStock"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/jhez_campo_borde"
+                android:hint="@string/jhez_hint_stock"
+                android:inputType="number"
+                android:paddingHorizontal="10dp"
+                android:textColor="@color/jhez_texto_principal"
+                android:textColorHint="@color/jhez_texto_principal"
                 android:textSize="14sp" />
 
             <TextView
@@ -159,7 +180,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="@string/jhez_sinopsis"
-                android:textColor="#5c3f1c"
+                android:textColor="@color/jhez_texto_principal"
                 android:textSize="14sp" />
 
             <EditText
@@ -167,13 +188,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:layout_marginTop="6dp"
-                android:background="@drawable/campo_borde"
+                android:background="@drawable/jhez_campo_borde"
                 android:gravity="top"
                 android:hint="@string/jhez_hint_sinopsis"
                 android:inputType="textMultiLine"
                 android:padding="10dp"
-                android:textColor="#5c3f1c"
-                android:textColorHint="#5c3f1c"
+                android:textColor="@color/jhez_texto_principal"
+                android:textColorHint="@color/jhez_texto_principal"
                 android:textSize="14sp" />
         </LinearLayout>
 
@@ -182,12 +203,21 @@
             android:layout_width="match_parent"
             android:layout_height="52dp"
             android:layout_marginTop="18dp"
-            android:background="@drawable/cuadro_borde"
+            android:background="@drawable/jhez_cuadro_borde"
             android:gravity="center_vertical"
             android:paddingHorizontal="14dp"
             android:text="@string/jhez_ingrese_imagen"
-            android:textColor="#5c3f1c"
+            android:textColor="@color/jhez_texto_principal"
             android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/ivPreviewImagen"
+            android:layout_width="120dp"
+            android:layout_height="160dp"
+            android:layout_marginTop="12dp"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -202,7 +232,7 @@
                 android:layout_height="54dp"
                 android:layout_marginEnd="20dp"
                 android:layout_weight="1"
-                android:background="@drawable/boton_claro_borde"
+                android:background="@drawable/jhez_boton_secundario"
                 android:clickable="true"
                 android:focusable="true"
                 android:gravity="center"
@@ -212,7 +242,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/jhez_cancelar"
-                    android:textColor="#5c3f1c"
+                    android:textColor="@color/jhez_texto_principal"
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -223,7 +253,7 @@
                 android:layout_height="54dp"
                 android:layout_marginStart="20dp"
                 android:layout_weight="1"
-                android:background="@drawable/boton_cafe"
+                android:background="@drawable/jhez_boton_principal"
                 android:clickable="true"
                 android:focusable="true"
                 android:gravity="center"
@@ -233,7 +263,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/jhez_guardar_libro"
-                    android:textColor="#f6eacc"
+                    android:textColor="@color/jhez_texto_boton"
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </LinearLayout>

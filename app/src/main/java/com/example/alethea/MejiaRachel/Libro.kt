@@ -6,5 +6,8 @@ data class Libro(
     val autor: String,
     val categoria: String,
     val anio: String,
-    val sinopsis: String = ""
+    val sinopsis: String = "",
+    val rutaImagen: String = "",
+    val stock: Int = 0,
+    val disponibles: Int = 0
 )

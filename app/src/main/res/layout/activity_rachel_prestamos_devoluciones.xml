@@ -4,32 +4,32 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo_claro"
+    android:background="@drawable/fondo_rachel"
     tools:context=".MejiaRachel.PrestamosDevolucionesActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingHorizontal="20dp"
-        android:paddingTop="20dp"
-        android:paddingBottom="160dp">
+        android:paddingHorizontal="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="24dp">
 
         <!-- Header -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginBottom="20dp">
+            android:layout_marginBottom="16dp">
 
             <ImageView
                 android:id="@+id/btnAtras"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
                 android:layout_gravity="center_vertical"
                 android:src="@drawable/ic_flecha_atras"
                 android:contentDescription="@string/rachel_regresar"
-                android:tint="#5c3f1c" />
+                android:tint="@color/rachel_texto_encabezado" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -37,163 +37,173 @@
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="8dp"
                 android:text="@string/prestamos_titulo"
-                android:textColor="#5c3f1c"
-                android:textSize="22sp"
+                android:textColor="@color/rachel_texto_encabezado"
+                android:textSize="20sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
-        <!-- Card devoluciones pendientes -->
+        <!-- KPI Row -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/bg_card"
-            android:orientation="vertical"
-            android:padding="14dp">
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
-                android:text="@string/prestamos_devoluciones_pendientes"
-                android:textColor="#5C3A21"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-
-            <!-- Encabezado tabla -->
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:orientation="horizontal">
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/rachel_tarjeta"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_reloj_arena"
+                    android:contentDescription="@string/prestamos_pendientes"
+                    android:tint="@color/rachel_texto_principal" />
 
                 <TextView
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:text="@string/tabla_usuario"
-                    android:textColor="#5C3A21"
-                    android:textSize="12sp"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/prestamos_pendientes"
+                    android:textColor="@color/rachel_texto_principal"
+                    android:textSize="11sp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:layout_width="0dp"
+                    android:id="@+id/tvKpiPendientes"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:text="@string/tabla_libro"
-                    android:textColor="#5C3A21"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:gravity="center"
-                    android:text="@string/tabla_fecha_prestamo"
-                    android:textColor="#5C3A21"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:gravity="center"
-                    android:text="@string/tabla_fecha_limite"
-                    android:textColor="#5C3A21"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:gravity="center"
-                    android:text="@string/tabla_estado"
-                    android:textColor="#5C3A21"
-                    android:textSize="12sp"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/valor_cero"
+                    android:textColor="@color/rachel_texto_principal"
+                    android:textSize="22sp"
                     android:textStyle="bold" />
             </LinearLayout>
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvDevoluciones"
-                android:layout_width="match_parent"
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:minHeight="160dp"
-                android:nestedScrollingEnabled="false"
-                tools:listitem="@layout/item_devolucion" />
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:background="@drawable/rachel_tarjeta"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_devoluciones"
+                    android:contentDescription="@string/prestamos_historial"
+                    android:tint="@color/rachel_texto_principal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/prestamos_historial"
+                    android:textColor="@color/rachel_texto_principal"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvKpiHistorial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/valor_cero"
+                    android:textColor="@color/rachel_texto_principal"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
         </LinearLayout>
 
         <!-- Card prestamos pendientes -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/bg_card"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/rachel_tarjeta"
             android:orientation="vertical"
-            android:padding="14dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
-                android:text="@string/prestamos_pendientes"
-                android:textColor="#5C3A21"
-                android:textSize="15sp"
-                android:textStyle="bold" />
+            android:padding="12dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/ic_reloj_arena"
+                    android:contentDescription="@string/prestamos_pendientes"
+                    android:tint="@color/rachel_texto_principal" />
 
                 <TextView
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:text="@string/tabla_usuario"
-                    android:textColor="#5C3A21"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:text="@string/tabla_libro"
-                    android:textColor="#5C3A21"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:gravity="center"
-                    android:text="@string/tabla_fecha_solicitada"
-                    android:textColor="#5C3A21"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:gravity="center"
-                    android:text="@string/tabla_accion"
-                    android:textColor="#5C3A21"
-                    android:textSize="12sp"
+                    android:layout_marginStart="6dp"
+                    android:text="@string/prestamos_pendientes"
+                    android:textColor="@color/rachel_texto_principal"
+                    android:textSize="14sp"
                     android:textStyle="bold" />
             </LinearLayout>
 
-            <androidx.recyclerview.widget.RecyclerView
+            <com.example.alethea.MejiaRachel.NoScrollRecyclerView
                 android:id="@+id/rvPrestamosPendientes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:minHeight="120dp"
                 android:nestedScrollingEnabled="false"
                 tools:listitem="@layout/item_prestamo_pendiente" />
+        </LinearLayout>
+
+        <!-- Card historial -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rachel_tarjeta"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/ic_devoluciones"
+                    android:contentDescription="@string/prestamos_historial"
+                    android:tint="@color/rachel_texto_principal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:text="@string/prestamos_historial"
+                    android:textColor="@color/rachel_texto_principal"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <com.example.alethea.MejiaRachel.NoScrollRecyclerView
+                android:id="@+id/rvDevoluciones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                tools:listitem="@layout/item_devolucion" />
         </LinearLayout>
 
     </LinearLayout>

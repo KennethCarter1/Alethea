@@ -3,7 +3,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_claro"
+    android:background="@drawable/fondo_jhezrrel"
     android:fillViewport="true">
 
     <LinearLayout
@@ -26,14 +26,14 @@
                 android:layout_height="40dp"
                 android:src="@drawable/ic_flecha_atras"
                 android:contentDescription="@string/jhez_regresar"
-                android:tint="#5c3f1c" />
+                android:tint="@color/jhez_icono" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
                 android:text="@string/jhez_ajustes"
-                android:textColor="#5c3f1c"
+                android:textColor="@color/jhez_texto_principal"
                 android:textSize="31sp" />
         </LinearLayout>
 
@@ -42,7 +42,7 @@
             android:layout_width="match_parent"
             android:layout_height="72dp"
             android:layout_marginTop="58dp"
-            android:background="@drawable/cuadro_borde"
+            android:background="@drawable/jhez_cuadro_borde"
             android:gravity="center_vertical"
             android:orientation="horizontal"
             android:paddingHorizontal="12dp">
@@ -50,10 +50,10 @@
             <ImageView
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:background="@drawable/circulo_crema"
+                android:background="@drawable/jhez_circulo_icono"
                 android:padding="10dp"
                 android:src="@drawable/ic_candado"
-                android:tint="#5c3f1c" />
+                android:tint="@color/jhez_icono" />
 
             <TextView
                 android:layout_width="0dp"
@@ -62,7 +62,7 @@
                 android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:text="@string/jhez_cerrar_sesion"
-                android:textColor="#5c3f1c"
+                android:textColor="@color/jhez_texto_principal"
                 android:textSize="23sp" />
         </LinearLayout>
 
@@ -70,7 +70,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="34dp"
-            android:background="@drawable/cuadro_borde"
+            android:background="@drawable/jhez_cuadro_borde"
             android:orientation="vertical"
             android:padding="12dp">
 
@@ -78,7 +78,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/jhez_modo_apariencia"
-                android:textColor="#5c3f1c"
+                android:textColor="@color/jhez_texto_principal"
                 android:textSize="24sp" />
 
             <TextView
@@ -86,7 +86,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="@string/jhez_elige_modo"
-                android:textColor="#5c3f1c"
+                android:textColor="@color/jhez_texto_principal"
                 android:textSize="13sp" />
 
             <LinearLayout
@@ -102,7 +102,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginEnd="6dp"
                     android:layout_weight="1"
-                    android:background="@drawable/campo_borde"
+                    android:background="@drawable/jhez_modo_opcion"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:paddingHorizontal="12dp">
@@ -114,7 +114,7 @@
                         android:src="@drawable/ic_sol"
                         android:scaleType="centerInside"
                         android:padding="6dp"
-                        android:tint="#5c3f1c" />
+                        android:tint="@color/jhez_icono" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -122,14 +122,14 @@
                         android:layout_weight="1"
                         android:gravity="center_vertical"
                         android:text="@string/jhez_modo_claro"
-                        android:textColor="#5c3f1c"
+                        android:textColor="@color/jhez_texto_principal"
                         android:textSize="18sp" />
 
                     <View
                         android:id="@+id/radioClaro"
                         android:layout_width="26dp"
                         android:layout_height="26dp"
-                        android:background="@drawable/radio_activo" />
+                        android:background="@drawable/jhez_radio_activo" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -138,7 +138,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="6dp"
                     android:layout_weight="1"
-                    android:background="@drawable/campo_borde"
+                    android:background="@drawable/jhez_modo_opcion"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:paddingHorizontal="12dp">
@@ -150,7 +150,7 @@
                         android:src="@drawable/ic_luna"
                         android:scaleType="centerInside"
                         android:padding="6dp"
-                        android:tint="#5c3f1c" />
+                        android:tint="@color/jhez_icono" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -158,14 +158,14 @@
                         android:layout_weight="1"
                         android:gravity="center_vertical"
                         android:text="@string/jhez_modo_oscuro"
-                        android:textColor="#5c3f1c"
+                        android:textColor="@color/jhez_texto_principal"
                         android:textSize="18sp" />
 
                     <View
                         android:id="@+id/radioOscuro"
                         android:layout_width="26dp"
                         android:layout_height="26dp"
-                        android:background="@drawable/radio_inactivo" />
+                        android:background="@drawable/jhez_radio_inactivo" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -174,7 +174,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:background="@drawable/cuadro_borde"
+            android:background="@drawable/jhez_cuadro_borde"
             android:orientation="vertical"
             android:padding="14dp">
 
@@ -182,7 +182,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/jhez_integrantes"
-                android:textColor="#5c3f1c"
+                android:textColor="@color/jhez_texto_principal"
                 android:textSize="24sp" />
 
             <LinearLayout
@@ -202,7 +202,7 @@
                         android:layout_width="32dp"
                         android:layout_height="32dp"
                         android:src="@drawable/ic_perfil"
-                        android:tint="#5c3f1c"
+                        android:tint="@color/jhez_icono"
                         android:contentDescription="" />
 
                     <TextView
@@ -211,21 +211,21 @@
                         android:layout_weight="1"
                         android:layout_marginStart="10dp"
                         android:text="@string/jhez_integrante1"
-                        android:textColor="#5c3f1c"
+                        android:textColor="@color/jhez_texto_principal"
                         android:textSize="17sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/jhez_cedula1"
-                        android:textColor="#5c3f1c"
+                        android:textColor="@color/jhez_texto_principal"
                         android:textSize="15sp" />
                 </LinearLayout>
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="0.5dp"
-                    android:background="#5c3f1c"
+                    android:background="@color/jhez_linea"
                     android:layout_marginVertical="2dp" />
 
                 <LinearLayout
@@ -239,7 +239,7 @@
                         android:layout_width="32dp"
                         android:layout_height="32dp"
                         android:src="@drawable/ic_perfil"
-                        android:tint="#5c3f1c"
+                        android:tint="@color/jhez_icono"
                         android:contentDescription="" />
 
                     <TextView
@@ -248,21 +248,21 @@
                         android:layout_weight="1"
                         android:layout_marginStart="10dp"
                         android:text="@string/jhez_integrante2"
-                        android:textColor="#5c3f1c"
+                        android:textColor="@color/jhez_texto_principal"
                         android:textSize="17sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/jhez_cedula2"
-                        android:textColor="#5c3f1c"
+                        android:textColor="@color/jhez_texto_principal"
                         android:textSize="15sp" />
                 </LinearLayout>
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="0.5dp"
-                    android:background="#5c3f1c"
+                    android:background="@color/jhez_linea"
                     android:layout_marginVertical="2dp" />
 
                 <LinearLayout
@@ -276,7 +276,7 @@
                         android:layout_width="32dp"
                         android:layout_height="32dp"
                         android:src="@drawable/ic_perfil"
-                        android:tint="#5c3f1c"
+                        android:tint="@color/jhez_icono"
                         android:contentDescription="" />
 
                     <TextView
@@ -285,21 +285,21 @@
                         android:layout_weight="1"
                         android:layout_marginStart="10dp"
                         android:text="@string/jhez_integrante3"
-                        android:textColor="#5c3f1c"
+                        android:textColor="@color/jhez_texto_principal"
                         android:textSize="17sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/jhez_cedula3"
-                        android:textColor="#5c3f1c"
+                        android:textColor="@color/jhez_texto_principal"
                         android:textSize="15sp" />
                 </LinearLayout>
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="0.5dp"
-                    android:background="#5c3f1c"
+                    android:background="@color/jhez_linea"
                     android:layout_marginVertical="2dp" />
 
                 <LinearLayout
@@ -313,7 +313,7 @@
                         android:layout_width="32dp"
                         android:layout_height="32dp"
                         android:src="@drawable/ic_perfil"
-                        android:tint="#5c3f1c"
+                        android:tint="@color/jhez_icono"
                         android:contentDescription="" />
 
                     <TextView
@@ -322,14 +322,14 @@
                         android:layout_weight="1"
                         android:layout_marginStart="10dp"
                         android:text="@string/jhez_integrante4"
-                        android:textColor="#5c3f1c"
+                        android:textColor="@color/jhez_texto_principal"
                         android:textSize="17sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/jhez_cedula4"
-                        android:textColor="#5c3f1c"
+                        android:textColor="@color/jhez_texto_principal"
                         android:textSize="15sp" />
                 </LinearLayout>
             </LinearLayout>
@@ -340,7 +340,7 @@
                 android:layout_marginTop="24dp"
                 android:gravity="center"
                 android:text="@string/jhez_salon"
-                android:textColor="#5c3f1c"
+                android:textColor="@color/jhez_texto_principal"
                 android:textSize="20sp" />
         </LinearLayout>
 
@@ -348,7 +348,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
-            android:background="@drawable/cuadro_borde"
+            android:background="@drawable/jhez_cuadro_borde"
             android:orientation="vertical"
             android:padding="16dp">
 
@@ -365,7 +365,7 @@
                     android:clickable="true"
                     android:focusable="true"
                     android:src="@drawable/ic_play"
-                    android:tint="#5c3f1c"
+                    android:tint="@color/jhez_icono"
                     android:contentDescription="@string/jhez_play" />
 
                 <TextView
@@ -374,7 +374,7 @@
                     android:layout_weight="1"
                     android:layout_marginStart="12dp"
                     android:text="@string/jhez_musica"
-                    android:textColor="#5c3f1c"
+                    android:textColor="@color/jhez_texto_principal"
                     android:textSize="20sp" />
             </LinearLayout>
 
